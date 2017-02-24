@@ -1,0 +1,1485 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BHSI_FINANCEModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <ComplexType Name="Split_Result">
+    <Property Name="Items" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+  </ComplexType>
+  <ComplexType Name="ufnQtrList_Result">
+    <Property Name="Qtr" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SortOrder" Type="Decimal" Precision="11" Scale="1" />
+  </ComplexType>
+  <EntityType Name="STG_ETL_Parameters">
+    <Key>
+      <PropertyRef Name="ETLJobName" />
+      <PropertyRef Name="ParameterName" />
+    </Key>
+    <Property Name="ETLJobName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ParameterName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ParameterValue" Type="String" MaxLength="400" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ParameterDataType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="CreateUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="USER_ID" />
+    </Key>
+    <Property Name="USER_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EMAIL_ID" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FIRSTNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LASTNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PASSWORD" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="GROUP_ID" Type="Int16" Nullable="false" />
+    <Property Name="USER_STATUS" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CREATED_ON" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="MODIFIED_ON" Type="DateTime" Precision="0" />
+    <Property Name="CREATED_BY_ID" Type="Int16" Nullable="false" />
+    <Property Name="MODIFIED_BY_ID" Type="Int16" Nullable="false" />
+    <Property Name="uid" Type="Int32" />
+  </EntityType>
+  <EntityType Name="BHSI_ACCOR_FINANCE_DATA">
+    <Key>
+      <PropertyRef Name="RECORD_ID" />
+      <PropertyRef Name="QuarterName" />
+      <PropertyRef Name="MeasureType" />
+      <PropertyRef Name="YYYY" />
+      <PropertyRef Name="QQ" />
+      <PropertyRef Name="CountryName" />
+      <PropertyRef Name="ProductLineName" />
+    </Key>
+    <Property Name="RECORD_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="QuarterName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MeasureType" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="YYYY" Type="Int32" Nullable="false" />
+    <Property Name="QQ" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CountryName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ProductLineName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Net_Premiums_Written" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Net_Premiums_Earned" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Other_Income" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Losses_Incurred__IL_LAE_" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Commission_Paid__Acquisition_Expenses_" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Acquisition_DAC" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Acquisition_DAC___Prior" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Acq__post_DAC" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="GAAP_Income" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Inception_to_Date" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Losses_Paid" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Loss_Case_Reserves" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Loss_IBNR" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Allocated_Expenses_Pd" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Loss_Expense_Case_Reserves" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Expense_IBNR_Reserves" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Loss_Expenses_Incurred" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="ULAE_Pd" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="ULAE_Reserves" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="ULAE_Incurred" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Premium_Based_Exp__Paid" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Commission_Accrual" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Premium_Based_Exp__Accrual" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Operating_Expenses_Allocated" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Operating_Expenses_Direct" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Operating_Exp_DAC" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Operating_Exp_post_DAC" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="GAAP_Income___FD" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Inception_to_Date___FD" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Unearned_Premium_Change" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Other_U_W_Expense_Paid" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="U_W_Expense_Reserves" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Agents_Balances" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Investment_in_Travel___Assist" Type="Decimal" Precision="18" Scale="4" />
+  </EntityType>
+  <EntityType Name="dimMeasure">
+    <Key>
+      <PropertyRef Name="RowID" />
+    </Key>
+    <Property Name="RowID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MeasureId" Type="Int16" />
+    <Property Name="OrignalMeasure" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Measure" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Mgt" Type="Boolean" />
+    <Property Name="FullDac" Type="Boolean" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="SortOrder" Type="Int16" />
+    <Property Name="Expense" Type="Boolean" />
+    <Property Name="EffectiveDate" Type="DateTime" Precision="0" />
+    <Property Name="ExpiryDate" Type="DateTime" Precision="0" />
+    <Property Name="SrcMeasureAlias" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="dimMeasure_20160909">
+    <Key>
+      <PropertyRef Name="RowID" />
+    </Key>
+    <Property Name="RowID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MeasureId" Type="Int16" />
+    <Property Name="OrignalMeasure" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Measure" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Mgt" Type="Boolean" />
+    <Property Name="FullDac" Type="Boolean" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="SortOrder" Type="Int16" />
+    <Property Name="Expense" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="dimMeasure_ISA_20160812">
+    <Key>
+      <PropertyRef Name="RowID" />
+    </Key>
+    <Property Name="RowID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MeasureId" Type="Int16" />
+    <Property Name="OrignalMeasure" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Measure" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Mgt" Type="Boolean" />
+    <Property Name="FullDac" Type="Boolean" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="SortOrder" Type="Int16" />
+    <Property Name="Expense" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="dimMeasureSubGroup">
+    <Key>
+      <PropertyRef Name="RowID_" />
+    </Key>
+    <Property Name="RowID_" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MeasureSubGroupId" Type="Int16" />
+    <Property Name="MeasureSubGroupName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MeasureId" Type="Int16" />
+    <Property Name="Multiplier" Type="Int32" />
+    <Property Name="SortOrder" Type="Int16" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="EffectiveDate" Type="DateTime" Precision="0" />
+    <Property Name="ExpiryDate" Type="DateTime" Precision="0" />
+    <Property Name="ACT_BDG_IND" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="dimMeasureSubGroup_20160909">
+    <Key>
+      <PropertyRef Name="RowID_" />
+    </Key>
+    <Property Name="RowID_" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MeasureSubGroupId" Type="Int16" />
+    <Property Name="MeasureSubGroupName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MeasureId" Type="Int16" />
+    <Property Name="Multiplier" Type="Int32" />
+    <Property Name="SortOrder" Type="Int16" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="EffectiveDate" Type="DateTime" Precision="0" />
+    <Property Name="ExpiryDate" Type="DateTime" Precision="0" />
+    <Property Name="ACT_BDG_IND" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="dimPage">
+    <Key>
+      <PropertyRef Name="RowID" />
+    </Key>
+    <Property Name="RowID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PageID" Type="Int16" />
+    <Property Name="PageName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PageLabel" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="dimProduct">
+    <Key>
+      <PropertyRef Name="RowID" />
+    </Key>
+    <Property Name="RowID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductID" Type="Int16" />
+    <Property Name="Product" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="SortOrder" Type="Int16" />
+    <Property Name="ProductLabel" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="EffectiveDate" Type="DateTime" Precision="0" />
+    <Property Name="ExpiryDate" Type="DateTime" Precision="0" />
+    <Property Name="SrcProductAlias" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="DIMPRODUCT_20160909">
+    <Key>
+      <PropertyRef Name="RowID" />
+    </Key>
+    <Property Name="RowID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductID" Type="Int16" />
+    <Property Name="Product" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="SortOrder" Type="Int16" />
+    <Property Name="ProductLabel" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="dimproduct_bkp_28102016">
+    <Key>
+      <PropertyRef Name="RowID" />
+    </Key>
+    <Property Name="RowID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductID" Type="Int16" />
+    <Property Name="Product" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="SortOrder" Type="Int16" />
+    <Property Name="ProductLabel" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="EffectiveDate" Type="DateTime" Precision="0" />
+    <Property Name="ExpiryDate" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="dimProduct_ISA_20160812">
+    <Key>
+      <PropertyRef Name="RowID" />
+    </Key>
+    <Property Name="RowID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductID" Type="Int16" />
+    <Property Name="Product" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="SortOrder" Type="Int16" />
+    <Property Name="ProductLabel" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="dimQtr">
+    <Key>
+      <PropertyRef Name="RowID" />
+    </Key>
+    <Property Name="RowID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="QtrID" Type="Int16" />
+    <Property Name="Qtr" Type="DateTime" Precision="0" />
+    <Property Name="QtrLabel" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SortOrder" Type="Int16" />
+  </EntityType>
+  <EntityType Name="DimQtr_bkp">
+    <Key>
+      <PropertyRef Name="RowID" />
+    </Key>
+    <Property Name="RowID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="QtrID" Type="Int16" />
+    <Property Name="Qtr" Type="DateTime" Precision="0" />
+    <Property Name="QtrLabel" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SortOrder" Type="Int16" />
+  </EntityType>
+  <EntityType Name="dimRegion">
+    <Key>
+      <PropertyRef Name="RowID" />
+    </Key>
+    <Property Name="RowID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RegionID" Type="Int16" />
+    <Property Name="Region" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="RegionLabel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SortOrder" Type="Int16" />
+    <Property Name="Continent" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="SrcRegionAlias" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="dimRegion_20160909">
+    <Key>
+      <PropertyRef Name="RowID" />
+    </Key>
+    <Property Name="RowID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RegionID" Type="Int16" />
+    <Property Name="Region" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="RegionLabel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SortOrder" Type="Int16" />
+    <Property Name="Continent" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="dimRegion_ISA_20160812">
+    <Key>
+      <PropertyRef Name="RowID" />
+    </Key>
+    <Property Name="RowID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RegionID" Type="Int16" />
+    <Property Name="Region" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="RegionLabel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SortOrder" Type="Int16" />
+    <Property Name="Continent" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="dimReportMaster">
+    <Key>
+      <PropertyRef Name="RowID" />
+      <PropertyRef Name="ReportCategory" />
+      <PropertyRef Name="ReportName" />
+      <PropertyRef Name="ReportOrder" />
+      <PropertyRef Name="RegionId" />
+      <PropertyRef Name="ProductId" />
+      <PropertyRef Name="QTD_YTD_ITD" />
+      <PropertyRef Name="ReportPageName" />
+      <PropertyRef Name="ReportHeading" />
+      <PropertyRef Name="CreateDate" />
+    </Key>
+    <Property Name="RowID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ReportCategory" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ReportName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ReportOrder" Type="Int32" Nullable="false" />
+    <Property Name="RegionId" Type="Int32" Nullable="false" />
+    <Property Name="ProductId" Type="Int32" Nullable="false" />
+    <Property Name="QTD_YTD_ITD" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="ReportPageName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ReportHeading" Type="String" MaxLength="256" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MGT_RPT_IND" Type="Boolean" />
+    <Property Name="DAC_RPT_IND" Type="Boolean" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="0" />
+    <Property Name="EffectiveDate" Type="DateTime" Precision="0" />
+    <Property Name="ExpiryDate" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="dimSubProduct">
+    <Key>
+      <PropertyRef Name="RowID" />
+    </Key>
+    <Property Name="RowID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SubProductId" Type="Int16" />
+    <Property Name="SubProductName" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="SubProductLabel" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="SrcSubProductAlias" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ProductId" Type="Int16" />
+    <Property Name="SortOrder" Type="Int16" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="EffectiveDate" Type="DateTime" Precision="0" />
+    <Property Name="ExpiryDate" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="EXCLUSION_MEASURE">
+    <Key>
+      <PropertyRef Name="RowId" />
+    </Key>
+    <Property Name="RowId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MeasureId" Type="Int32" />
+    <Property Name="Measure" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SrcMeasureAlias" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="group_rights">
+    <Key>
+      <PropertyRef Name="GROUP_RIGHTS_ID" />
+      <PropertyRef Name="GROUP_RIGHTS_NAME" />
+    </Key>
+    <Property Name="GROUP_RIGHTS_ID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GROUP_RIGHTS_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="group_rights_mapper">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="GROUP_ID" />
+      <PropertyRef Name="GROUP_RIGHTS_ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GROUP_ID" Type="Int32" Nullable="false" />
+    <Property Name="GROUP_RIGHTS_ID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="group">
+    <Key>
+      <PropertyRef Name="GROUP_ID" />
+      <PropertyRef Name="GROUP_NAME" />
+      <PropertyRef Name="STATUS" />
+      <PropertyRef Name="CREATED_BY_ID" />
+      <PropertyRef Name="MODIFIED_BY_ID" />
+    </Key>
+    <Property Name="GROUP_ID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GROUP_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STATUS" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CREATED_ON" Type="DateTime" Precision="0" />
+    <Property Name="MODIFIED_ON" Type="DateTime" Precision="0" />
+    <Property Name="CREATED_BY_ID" Type="Int16" Nullable="false" />
+    <Property Name="MODIFIED_BY_ID" Type="Int16" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RejectActualData">
+    <Key>
+      <PropertyRef Name="ErrorLogID" />
+    </Key>
+    <Property Name="ErrorLogID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RowID" Type="Int64" />
+    <Property Name="Qtr" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Region" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Product" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Measure" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TranType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AmountType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Amount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="QtrID" Type="Int64" />
+    <Property Name="RegionID" Type="Int64" />
+    <Property Name="ProductID" Type="Int64" />
+    <Property Name="MeasureID" Type="Int64" />
+    <Property Name="JobID" Type="Int64" />
+  </EntityType>
+  <EntityType Name="RejectAdjustmentData">
+    <Key>
+      <PropertyRef Name="ErrorLogID" />
+    </Key>
+    <Property Name="ErrorLogID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RowID" Type="Int64" />
+    <Property Name="Qtr" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Region" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Product" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Measure" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TransType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AmountType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Amount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="QtrID" Type="Int64" />
+    <Property Name="RegionID" Type="Int64" />
+    <Property Name="ProductID" Type="Int64" />
+    <Property Name="MeasureID" Type="Int64" />
+    <Property Name="JobID" Type="Int64" />
+    <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="UserID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="RejectBudgetData">
+    <Key>
+      <PropertyRef Name="ErrorLogID" />
+    </Key>
+    <Property Name="ErrorLogID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RowID" Type="Int32" />
+    <Property Name="Qtr" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Region" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Product" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Measure" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TranType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AmountType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Amount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="QtrID" Type="Int64" />
+    <Property Name="RegionID" Type="Int64" />
+    <Property Name="ProductID" Type="Int64" />
+    <Property Name="MeasureID" Type="Int64" />
+    <Property Name="JobID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="STG_ACTUALS">
+    <Key>
+      <PropertyRef Name="RowID" />
+    </Key>
+    <Property Name="RowID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RegionID" Type="Int16" />
+    <Property Name="ProductID" Type="Int16" />
+    <Property Name="QtrID" Type="Int16" />
+    <Property Name="MeasureID" Type="Int16" />
+    <Property Name="Amount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+    <Property Name="LastModifiedDate" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="stg_actuals_20160627">
+    <Key>
+      <PropertyRef Name="RowID" />
+    </Key>
+    <Property Name="RowID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RegionID" Type="Int16" />
+    <Property Name="ProductID" Type="Int16" />
+    <Property Name="QtrID" Type="Int16" />
+    <Property Name="MeasureID" Type="Int16" />
+    <Property Name="Amount" Type="Decimal" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="STG_ACTUALS_20160722">
+    <Key>
+      <PropertyRef Name="RowID" />
+    </Key>
+    <Property Name="RowID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RegionID" Type="Int16" />
+    <Property Name="ProductID" Type="Int16" />
+    <Property Name="QtrID" Type="Int16" />
+    <Property Name="MeasureID" Type="Int16" />
+    <Property Name="Amount" Type="Decimal" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="STG_ACTUALS_20161021">
+    <Key>
+      <PropertyRef Name="RowID" />
+    </Key>
+    <Property Name="RowID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RegionID" Type="Int16" />
+    <Property Name="ProductID" Type="Int16" />
+    <Property Name="QtrID" Type="Int16" />
+    <Property Name="MeasureID" Type="Int16" />
+    <Property Name="Amount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+    <Property Name="LastModifiedDate" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="STG_ACTUALS_BKP_20170209">
+    <Key>
+      <PropertyRef Name="RowID" />
+    </Key>
+    <Property Name="RowID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RegionID" Type="Int16" />
+    <Property Name="ProductID" Type="Int16" />
+    <Property Name="QtrID" Type="Int16" />
+    <Property Name="MeasureID" Type="Int16" />
+    <Property Name="Amount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+    <Property Name="LastModifiedDate" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="STG_ACTUALS_preDiv1000">
+    <Key>
+      <PropertyRef Name="RowID" />
+    </Key>
+    <Property Name="RowID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RegionID" Type="Int16" />
+    <Property Name="ProductID" Type="Int16" />
+    <Property Name="QtrID" Type="Int16" />
+    <Property Name="MeasureID" Type="Int16" />
+    <Property Name="Amount" Type="Decimal" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="STG_ACTUALS_Travel">
+    <Key>
+      <PropertyRef Name="RowID" />
+    </Key>
+    <Property Name="RowID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RegionID" Type="Int16" />
+    <Property Name="ProductID" Type="Int16" />
+    <Property Name="QtrID" Type="Int16" />
+    <Property Name="MeasureID" Type="Int16" />
+    <Property Name="Amount" Type="Decimal" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="STG_ACTUALS_US_NA_ISA">
+    <Key>
+      <PropertyRef Name="RowID" />
+    </Key>
+    <Property Name="RowID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RegionID" Type="Int16" />
+    <Property Name="ProductID" Type="Int16" />
+    <Property Name="QtrID" Type="Int16" />
+    <Property Name="MeasureID" Type="Int16" />
+    <Property Name="Amount" Type="Decimal" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="STG_ADJUSTMENTS">
+    <Key>
+      <PropertyRef Name="RowID" />
+    </Key>
+    <Property Name="RowID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RegionID" Type="Int16" />
+    <Property Name="ProductID" Type="Int16" />
+    <Property Name="QtrID" Type="Int16" />
+    <Property Name="MeasureID" Type="Int16" />
+    <Property Name="ACT_BDG_IND" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="Amount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="UserId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="STG_ADJUSTMENTS_20161116">
+    <Key>
+      <PropertyRef Name="RowID" />
+    </Key>
+    <Property Name="RowID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RegionID" Type="Int16" />
+    <Property Name="ProductID" Type="Int16" />
+    <Property Name="QtrID" Type="Int16" />
+    <Property Name="MeasureID" Type="Int16" />
+    <Property Name="ACT_BDG_IND" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="Amount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="UserId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="STG_ADJUSTMENTS_ISA">
+    <Key>
+      <PropertyRef Name="RowID" />
+    </Key>
+    <Property Name="RowID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RegionID" Type="Int16" />
+    <Property Name="ProductID" Type="Int16" />
+    <Property Name="QtrID" Type="Int16" />
+    <Property Name="MeasureID" Type="Int16" />
+    <Property Name="ACT_BDG_IND" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="Amount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Comments" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="UserId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="createDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="STG_BUDGET">
+    <Key>
+      <PropertyRef Name="RowID" />
+    </Key>
+    <Property Name="RowID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RegionID" Type="Int16" />
+    <Property Name="ProductID" Type="Int16" />
+    <Property Name="QtrID" Type="Int16" />
+    <Property Name="MeasureID" Type="Int16" />
+    <Property Name="Amount" Type="Decimal" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="stg_budget_20160627">
+    <Key>
+      <PropertyRef Name="RowID" />
+    </Key>
+    <Property Name="RowID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RegionID" Type="Int16" />
+    <Property Name="ProductID" Type="Int16" />
+    <Property Name="QtrID" Type="Int16" />
+    <Property Name="MeasureID" Type="Int16" />
+    <Property Name="Amount" Type="Decimal" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="STG_BUDGET_20160719">
+    <Key>
+      <PropertyRef Name="RowID" />
+    </Key>
+    <Property Name="RowID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RegionID" Type="Int16" />
+    <Property Name="ProductID" Type="Int16" />
+    <Property Name="QtrID" Type="Int16" />
+    <Property Name="MeasureID" Type="Int16" />
+    <Property Name="Amount" Type="Decimal" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="STG_BUDGET_BKP_20170209">
+    <Key>
+      <PropertyRef Name="RowID" />
+    </Key>
+    <Property Name="RowID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RegionID" Type="Int16" />
+    <Property Name="ProductID" Type="Int16" />
+    <Property Name="QtrID" Type="Int16" />
+    <Property Name="MeasureID" Type="Int16" />
+    <Property Name="Amount" Type="Decimal" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="stg_budget_Travel">
+    <Key>
+      <PropertyRef Name="RowID" />
+    </Key>
+    <Property Name="RowID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RegionID" Type="Int16" />
+    <Property Name="ProductID" Type="Int16" />
+    <Property Name="QtrID" Type="Int16" />
+    <Property Name="MeasureID" Type="Int16" />
+    <Property Name="Amount" Type="Decimal" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="stg_comments">
+    <Key>
+      <PropertyRef Name="RowID" />
+    </Key>
+    <Property Name="RowID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="qtrID" Type="Int16" />
+    <Property Name="pagename" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CREATED_ON" Type="DateTime" Precision="0" />
+    <Property Name="MODIFIED_ON" Type="DateTime" Precision="0" />
+    <Property Name="CREATED_BY_ID" Type="Int16" />
+    <Property Name="MODIFIED_BY_ID" Type="Int16" />
+  </EntityType>
+  <EntityType Name="stg_comments_isa">
+    <Key>
+      <PropertyRef Name="RowID" />
+    </Key>
+    <Property Name="RowID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="qtrID" Type="Int16" />
+    <Property Name="pagename" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="STG_COMMENTS_ISA_20160812">
+    <Key>
+      <PropertyRef Name="RowID" />
+    </Key>
+    <Property Name="RowID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="qtrID" Type="Int16" />
+    <Property Name="pagename" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CREATED_ON" Type="DateTime" Precision="0" />
+    <Property Name="MODIFIED_ON" Type="DateTime" Precision="0" />
+    <Property Name="CREATED_BY_ID" Type="Int16" />
+    <Property Name="MODIFIED_BY_ID" Type="Int16" />
+  </EntityType>
+  <EntityType Name="STG_ETL_Logs">
+    <Key>
+      <PropertyRef Name="RowID" />
+      <PropertyRef Name="JobID" />
+    </Key>
+    <Property Name="RowID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="JobID" Type="Int32" Nullable="false" />
+    <Property Name="RunDate" Type="DateTime" Precision="0" />
+    <Property Name="ProcessType" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="ProcessStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ProcessLogMessage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LogUser" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LogTimestamp" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="STG_ETL_Parameters_BKP_20170209">
+    <Key>
+      <PropertyRef Name="ETLJobName" />
+      <PropertyRef Name="ParameterName" />
+      <PropertyRef Name="ParameterValue" />
+      <PropertyRef Name="ParameterDataType" />
+      <PropertyRef Name="CreateDate" />
+      <PropertyRef Name="CreateUser" />
+    </Key>
+    <Property Name="ETLJobName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ParameterName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ParameterValue" Type="String" MaxLength="400" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ParameterDataType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="CreateUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="STG_FINANCIALS">
+    <Key>
+      <PropertyRef Name="Row_id" />
+    </Key>
+    <Property Name="Row_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Region" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Period" Type="DateTime" Precision="0" />
+    <Property Name="Measure" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Type_ABF" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Amount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Product" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="stg_Headcount">
+    <Key>
+      <PropertyRef Name="RowID" />
+    </Key>
+    <Property Name="RowID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Location" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="QtrId" Type="Int16" />
+    <Property Name="Actual" Type="Int32" />
+    <Property Name="Budget" Type="Int32" />
+    <Property Name="SortOrder" Type="Int16" />
+  </EntityType>
+  <EntityType Name="TMP_Actuals">
+    <Key>
+      <PropertyRef Name="RowID" />
+      <PropertyRef Name="CreateDate" />
+      <PropertyRef Name="CreateUser" />
+    </Key>
+    <Property Name="RowID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Qtr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Region" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Product" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Measure" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TranType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AmountType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Amount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="UserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="CreateUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TMP_Actuals_BKP_20170209">
+    <Key>
+      <PropertyRef Name="RowID" />
+      <PropertyRef Name="CreateDate" />
+      <PropertyRef Name="CreateUser" />
+    </Key>
+    <Property Name="RowID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Qtr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Region" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Product" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Measure" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TranType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AmountType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Amount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="UserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="CreateUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TMP_ADJUSTMENTS">
+    <Key>
+      <PropertyRef Name="RowID" />
+      <PropertyRef Name="CreateDate" />
+      <PropertyRef Name="CreateUser" />
+    </Key>
+    <Property Name="RowID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Qtr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Region" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Product" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Measure" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TranType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AmountType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Amount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="UserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="CreateUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TMP_Budget">
+    <Key>
+      <PropertyRef Name="RowID" />
+      <PropertyRef Name="CreateDate" />
+      <PropertyRef Name="CreateUser" />
+    </Key>
+    <Property Name="RowID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Qtr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Region" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Product" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Measure" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TranType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AmountType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Amount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="UserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="CreateUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BHSI_ACCOR_FINANCE_DATA_Adi">
+    <Key>
+      <PropertyRef Name="RECORD_ID" />
+      <PropertyRef Name="QuarterName" />
+      <PropertyRef Name="MeasureType" />
+      <PropertyRef Name="YYYY" />
+      <PropertyRef Name="QQ" />
+      <PropertyRef Name="CountryName" />
+      <PropertyRef Name="ProductLineName" />
+    </Key>
+    <Property Name="RECORD_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="QuarterName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MeasureType" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="YYYY" Type="Int32" Nullable="false" />
+    <Property Name="QQ" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CountryName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ProductLineName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Net_Premiums_Written" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Net_Premiums_Earned" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Other_Income" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Losses_Incurred__IL_LAE_" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Commission_Paid__Acquisition_Expenses_" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Acquisition_DAC" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Acquisition_DAC___Prior" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Acq__post_DAC" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="GAAP_Income" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Inception_to_Date" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Losses_Paid" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Loss_Case_Reserves" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Loss_IBNR" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Allocated_Expenses_Pd" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Loss_Expense_Case_Reserves" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Expense_IBNR_Reserves" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Loss_Expenses_Incurred" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="ULAE_Pd" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="ULAE_Reserves" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="ULAE_Incurred" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Premium_Based_Exp__Paid" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Commission_Accrual" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Premium_Based_Exp__Accrual" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Operating_Expenses_Allocated" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Operating_Expenses_Direct" Type="Decimal" Precision="18" Scale="4" />
+  </EntityType>
+  <EntityType Name="BHSI_ACCOR_FINANCE_DATA_SHATRU">
+    <Key>
+      <PropertyRef Name="RECORD_ID" />
+      <PropertyRef Name="QuarterName" />
+      <PropertyRef Name="MeasureType" />
+      <PropertyRef Name="YYYY" />
+      <PropertyRef Name="QQ" />
+      <PropertyRef Name="CountryName" />
+      <PropertyRef Name="ProductLineName" />
+    </Key>
+    <Property Name="RECORD_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="QuarterName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MeasureType" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="YYYY" Type="Int32" Nullable="false" />
+    <Property Name="QQ" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CountryName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ProductLineName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Net_Premiums_Written" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Net_Premiums_Earned" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Other_Income" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Losses_Incurred" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Commission_Paid" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Acquisition_DAC" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Acusiition_DAC___Prior" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Acq__post_DAC" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Direct_Expenses" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="GAAP_Income" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Inception_to_Date" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Operating_Expenses" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Losses_Paid" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Loss_Case_Reserves" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Loss_IBNR" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Allocated_Expenses_Pd" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Loss_Expense_Case_Reserves" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Expense_IBNR_Reserves" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Loss_Expenses_Incurred" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="ULAE_Pd" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="ULAE_Reserves" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="ULAE_Incurred" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Premium_Based_Exp__Paid" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Commission_Accrual" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Premium_Based_Exp__Accrual" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Operating_Expenses_Allocated" Type="Decimal" Precision="18" Scale="4" />
+  </EntityType>
+  <EntityType Name="BHSI_ACCOR_FINANCE_DATA_SHATRU_test">
+    <Key>
+      <PropertyRef Name="RECORD_ID" />
+      <PropertyRef Name="QuarterName" />
+      <PropertyRef Name="MeasureType" />
+      <PropertyRef Name="YYYY" />
+      <PropertyRef Name="QQ" />
+      <PropertyRef Name="CountryName" />
+      <PropertyRef Name="ProductLineName" />
+    </Key>
+    <Property Name="RECORD_ID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="QuarterName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MeasureType" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="YYYY" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="QQ" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CountryName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ProductLineName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Net_Premiums_Written" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Net_Premiums_Earned" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Other_Income" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Losses_Incurred" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Commission_Paid" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Acquisition_DAC" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Acusiition_DAC___Prior" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Acq__post_DAC" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Direct_Expenses" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="GAAP_Income" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Inception_to_Date" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Operating_Expenses" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Losses_Paid" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Loss_Case_Reserves" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Loss_IBNR" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Allocated_Expenses_Pd" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Loss_Expense_Case_Reserves" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Expense_IBNR_Reserves" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Loss_Expenses_Incurred" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ULAE_Pd" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ULAE_Reserves" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ULAE_Incurred" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Premium_Based_Exp__Paid" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Commission_Accrual" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Premium_Based_Exp__Accrual" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Operating_Expenses_Allocated" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="dimReportList">
+    <Key>
+      <PropertyRef Name="RowID" />
+      <PropertyRef Name="ReportCategory" />
+      <PropertyRef Name="ReportName" />
+      <PropertyRef Name="ReportOrder" />
+      <PropertyRef Name="RegionLabel" />
+      <PropertyRef Name="QTD_YTD_ITD" />
+      <PropertyRef Name="ProductLabel" />
+      <PropertyRef Name="ReportPageName" />
+      <PropertyRef Name="ReportHeading" />
+      <PropertyRef Name="CreateDate" />
+    </Key>
+    <Property Name="RowID" Type="Int32" Nullable="false" />
+    <Property Name="ReportCategory" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ReportName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ReportOrder" Type="Int32" Nullable="false" />
+    <Property Name="RegionLabel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="QTD_YTD_ITD" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="ProductLabel" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ReportPageName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ReportHeading" Type="String" MaxLength="256" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MGT_RPT_IND" Type="Boolean" />
+    <Property Name="DAC_RPT_IND" Type="Boolean" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="LastUpdateDate" Type="DateTime" Precision="0" />
+    <Property Name="EffectiveDate" Type="DateTime" Precision="0" />
+    <Property Name="ExpiryDate" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="VW_ADJUSTMENTREPORT">
+    <Key>
+      <PropertyRef Name="OriginalAmount" />
+      <PropertyRef Name="CLASS" />
+    </Key>
+    <Property Name="Qtr" Type="DateTime" Precision="0" />
+    <Property Name="Region" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Product" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ACCOUNT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AdjAmount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="OriginalAmount" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="Reason" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="UserID" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ADJ_DATE" Type="DateTime" Precision="3" />
+    <Property Name="CLASS" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vw_calc_Acquisition_Expense">
+    <Key>
+      <PropertyRef Name="MeasureSort" />
+      <PropertyRef Name="Measure" />
+      <PropertyRef Name="Mgt" />
+      <PropertyRef Name="FullDac" />
+      <PropertyRef Name="Active" />
+      <PropertyRef Name="BudgetAmt" />
+    </Key>
+    <Property Name="RegionLabel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RegionSort" Type="Int16" />
+    <Property Name="continent" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ProductLabel" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ProductSort" Type="Int16" />
+    <Property Name="Qtr" Type="DateTime" Precision="0" />
+    <Property Name="MeasureSort" Type="Int32" Nullable="false" />
+    <Property Name="Measure" Type="String" MaxLength="19" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Mgt" Type="Int32" Nullable="false" />
+    <Property Name="FullDac" Type="Int32" Nullable="false" />
+    <Property Name="Active" Type="Int32" Nullable="false" />
+    <Property Name="ActualAmt" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="BudgetAmt" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vw_calc_Acquisition_Expenses_Incurred">
+    <Key>
+      <PropertyRef Name="MeasureSort" />
+      <PropertyRef Name="Measure" />
+      <PropertyRef Name="Mgt" />
+      <PropertyRef Name="FullDac" />
+      <PropertyRef Name="Active" />
+      <PropertyRef Name="BudgetAmt" />
+    </Key>
+    <Property Name="RegionLabel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RegionSort" Type="Int16" />
+    <Property Name="continent" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ProductLabel" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ProductSort" Type="Int16" />
+    <Property Name="Qtr" Type="DateTime" Precision="0" />
+    <Property Name="MeasureSort" Type="Int32" Nullable="false" />
+    <Property Name="Measure" Type="String" MaxLength="29" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Mgt" Type="Int32" Nullable="false" />
+    <Property Name="FullDac" Type="Int32" Nullable="false" />
+    <Property Name="Active" Type="Int32" Nullable="false" />
+    <Property Name="ActualAmt" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="BudgetAmt" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vw_calc_DAC_Adjustment">
+    <Key>
+      <PropertyRef Name="MeasureSort" />
+      <PropertyRef Name="Measure" />
+      <PropertyRef Name="Mgt" />
+      <PropertyRef Name="FullDac" />
+      <PropertyRef Name="Active" />
+      <PropertyRef Name="BudgetAmt" />
+    </Key>
+    <Property Name="RegionLabel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RegionSort" Type="Int16" />
+    <Property Name="continent" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ProductLabel" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ProductSort" Type="Int16" />
+    <Property Name="Qtr" Type="DateTime" Precision="0" />
+    <Property Name="MeasureSort" Type="Int32" Nullable="false" />
+    <Property Name="Measure" Type="String" MaxLength="14" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Mgt" Type="Int32" Nullable="false" />
+    <Property Name="FullDac" Type="Int32" Nullable="false" />
+    <Property Name="Active" Type="Int32" Nullable="false" />
+    <Property Name="ActualAmt" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="BudgetAmt" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vw_calc_GAAP_Income">
+    <Key>
+      <PropertyRef Name="MeasureSort" />
+      <PropertyRef Name="Measure" />
+      <PropertyRef Name="Mgt" />
+      <PropertyRef Name="FullDac" />
+      <PropertyRef Name="Active" />
+      <PropertyRef Name="BudgetAmt" />
+    </Key>
+    <Property Name="RegionLabel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RegionSort" Type="Int16" />
+    <Property Name="continent" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ProductLabel" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ProductSort" Type="Int16" />
+    <Property Name="Qtr" Type="DateTime" Precision="0" />
+    <Property Name="MeasureSort" Type="Int32" Nullable="false" />
+    <Property Name="Measure" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Mgt" Type="Int32" Nullable="false" />
+    <Property Name="FullDac" Type="Int32" Nullable="false" />
+    <Property Name="Active" Type="Int32" Nullable="false" />
+    <Property Name="ActualAmt" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="BudgetAmt" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vw_calc_Loss_Expenses_Incurred">
+    <Key>
+      <PropertyRef Name="MeasureSort" />
+      <PropertyRef Name="Measure" />
+      <PropertyRef Name="Mgt" />
+      <PropertyRef Name="FullDac" />
+      <PropertyRef Name="Active" />
+      <PropertyRef Name="BudgetAmt" />
+    </Key>
+    <Property Name="RegionLabel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RegionSort" Type="Int16" />
+    <Property Name="continent" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ProductLabel" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ProductSort" Type="Int16" />
+    <Property Name="Qtr" Type="DateTime" Precision="0" />
+    <Property Name="MeasureSort" Type="Int32" Nullable="false" />
+    <Property Name="Measure" Type="String" MaxLength="22" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Mgt" Type="Int32" Nullable="false" />
+    <Property Name="FullDac" Type="Int32" Nullable="false" />
+    <Property Name="Active" Type="Int32" Nullable="false" />
+    <Property Name="ActualAmt" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="BudgetAmt" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vw_calc_Losses_Incurred">
+    <Key>
+      <PropertyRef Name="MeasureSort" />
+      <PropertyRef Name="Measure" />
+      <PropertyRef Name="Mgt" />
+      <PropertyRef Name="FullDac" />
+      <PropertyRef Name="Active" />
+      <PropertyRef Name="BudgetAmt" />
+    </Key>
+    <Property Name="RegionLabel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RegionSort" Type="Int16" />
+    <Property Name="continent" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ProductLabel" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ProductSort" Type="Int16" />
+    <Property Name="Qtr" Type="DateTime" Precision="0" />
+    <Property Name="MeasureSort" Type="Int32" Nullable="false" />
+    <Property Name="Measure" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Mgt" Type="Int32" Nullable="false" />
+    <Property Name="FullDac" Type="Int32" Nullable="false" />
+    <Property Name="Active" Type="Int32" Nullable="false" />
+    <Property Name="ActualAmt" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="BudgetAmt" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vw_calc_Total_Loss_Incurred">
+    <Key>
+      <PropertyRef Name="MeasureSort" />
+      <PropertyRef Name="Measure" />
+      <PropertyRef Name="Mgt" />
+      <PropertyRef Name="FullDac" />
+      <PropertyRef Name="Active" />
+    </Key>
+    <Property Name="RegionLabel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RegionSort" Type="Int16" />
+    <Property Name="continent" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ProductLabel" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ProductSort" Type="Int16" />
+    <Property Name="Qtr" Type="DateTime" Precision="0" />
+    <Property Name="MeasureSort" Type="Int32" Nullable="false" />
+    <Property Name="Measure" Type="String" MaxLength="19" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Mgt" Type="Int32" Nullable="false" />
+    <Property Name="FullDac" Type="Int32" Nullable="false" />
+    <Property Name="Active" Type="Int32" Nullable="false" />
+    <Property Name="ActualAmt" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="BudgetAmt" Type="Int32" />
+  </EntityType>
+  <EntityType Name="vw_calc_Total_Operating_Expense">
+    <Key>
+      <PropertyRef Name="MeasureSort" />
+      <PropertyRef Name="Measure" />
+      <PropertyRef Name="Mgt" />
+      <PropertyRef Name="FullDac" />
+      <PropertyRef Name="Active" />
+      <PropertyRef Name="BudgetAmt" />
+    </Key>
+    <Property Name="RegionLabel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RegionSort" Type="Int16" />
+    <Property Name="continent" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ProductLabel" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ProductSort" Type="Int16" />
+    <Property Name="Qtr" Type="DateTime" Precision="0" />
+    <Property Name="MeasureSort" Type="Int32" Nullable="false" />
+    <Property Name="Measure" Type="String" MaxLength="23" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Mgt" Type="Int32" Nullable="false" />
+    <Property Name="FullDac" Type="Int32" Nullable="false" />
+    <Property Name="Active" Type="Int32" Nullable="false" />
+    <Property Name="ActualAmt" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="BudgetAmt" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vw_calc_ULAE_Incurred">
+    <Key>
+      <PropertyRef Name="MeasureSort" />
+      <PropertyRef Name="Measure" />
+      <PropertyRef Name="Mgt" />
+      <PropertyRef Name="FullDac" />
+      <PropertyRef Name="Active" />
+      <PropertyRef Name="BudgetAmt" />
+    </Key>
+    <Property Name="RegionLabel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RegionSort" Type="Int16" />
+    <Property Name="continent" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ProductLabel" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ProductSort" Type="Int16" />
+    <Property Name="Qtr" Type="DateTime" Precision="0" />
+    <Property Name="MeasureSort" Type="Int32" Nullable="false" />
+    <Property Name="Measure" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Mgt" Type="Int32" Nullable="false" />
+    <Property Name="FullDac" Type="Int32" Nullable="false" />
+    <Property Name="Active" Type="Int32" Nullable="false" />
+    <Property Name="ActualAmt" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="BudgetAmt" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vw_calc_Unearned_Premium">
+    <Key>
+      <PropertyRef Name="MeasureSort" />
+      <PropertyRef Name="Measure" />
+      <PropertyRef Name="Mgt" />
+      <PropertyRef Name="FullDac" />
+      <PropertyRef Name="Active" />
+      <PropertyRef Name="BudgetAmt" />
+    </Key>
+    <Property Name="RegionLabel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RegionSort" Type="Int16" />
+    <Property Name="continent" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ProductLabel" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ProductSort" Type="Int16" />
+    <Property Name="Qtr" Type="DateTime" Precision="0" />
+    <Property Name="MeasureSort" Type="Int32" Nullable="false" />
+    <Property Name="Measure" Type="String" MaxLength="16" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Mgt" Type="Int32" Nullable="false" />
+    <Property Name="FullDac" Type="Int32" Nullable="false" />
+    <Property Name="Active" Type="Int32" Nullable="false" />
+    <Property Name="ActualAmt" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="BudgetAmt" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vw_calc_UW_Expenses_Incurred">
+    <Key>
+      <PropertyRef Name="MeasureSort" />
+      <PropertyRef Name="Measure" />
+      <PropertyRef Name="Mgt" />
+      <PropertyRef Name="FullDac" />
+      <PropertyRef Name="Active" />
+      <PropertyRef Name="BudgetAmt" />
+    </Key>
+    <Property Name="RegionLabel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RegionSort" Type="Int16" />
+    <Property Name="continent" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ProductLabel" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ProductSort" Type="Int16" />
+    <Property Name="Qtr" Type="DateTime" Precision="0" />
+    <Property Name="MeasureSort" Type="Int32" Nullable="false" />
+    <Property Name="Measure" Type="String" MaxLength="21" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Mgt" Type="Int32" Nullable="false" />
+    <Property Name="FullDac" Type="Int32" Nullable="false" />
+    <Property Name="Active" Type="Int32" Nullable="false" />
+    <Property Name="ActualAmt" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="BudgetAmt" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="BHSI_FINANCEEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="STG_ETL_Parameters" EntityType="Self.STG_ETL_Parameters" />
+    <EntitySet Name="users" EntityType="Self.user" />
+    <EntitySet Name="BHSI_ACCOR_FINANCE_DATA" EntityType="Self.BHSI_ACCOR_FINANCE_DATA" />
+    <EntitySet Name="dimMeasures" EntityType="Self.dimMeasure" />
+    <EntitySet Name="dimMeasure_20160909" EntityType="Self.dimMeasure_20160909" />
+    <EntitySet Name="dimMeasure_ISA_20160812" EntityType="Self.dimMeasure_ISA_20160812" />
+    <EntitySet Name="dimMeasureSubGroups" EntityType="Self.dimMeasureSubGroup" />
+    <EntitySet Name="dimMeasureSubGroup_20160909" EntityType="Self.dimMeasureSubGroup_20160909" />
+    <EntitySet Name="dimPages" EntityType="Self.dimPage" />
+    <EntitySet Name="dimProducts" EntityType="Self.dimProduct" />
+    <EntitySet Name="DIMPRODUCT_20160909" EntityType="Self.DIMPRODUCT_20160909" />
+    <EntitySet Name="dimproduct_bkp_28102016" EntityType="Self.dimproduct_bkp_28102016" />
+    <EntitySet Name="dimProduct_ISA_20160812" EntityType="Self.dimProduct_ISA_20160812" />
+    <EntitySet Name="dimQtrs" EntityType="Self.dimQtr" />
+    <EntitySet Name="DimQtr_bkp" EntityType="Self.DimQtr_bkp" />
+    <EntitySet Name="dimRegions" EntityType="Self.dimRegion" />
+    <EntitySet Name="dimRegion_20160909" EntityType="Self.dimRegion_20160909" />
+    <EntitySet Name="dimRegion_ISA_20160812" EntityType="Self.dimRegion_ISA_20160812" />
+    <EntitySet Name="dimReportMasters" EntityType="Self.dimReportMaster" />
+    <EntitySet Name="dimSubProducts" EntityType="Self.dimSubProduct" />
+    <EntitySet Name="EXCLUSION_MEASURE" EntityType="Self.EXCLUSION_MEASURE" />
+    <EntitySet Name="group_rights" EntityType="Self.group_rights" />
+    <EntitySet Name="group_rights_mapper" EntityType="Self.group_rights_mapper" />
+    <EntitySet Name="groups" EntityType="Self.group" />
+    <EntitySet Name="RejectActualDatas" EntityType="Self.RejectActualData" />
+    <EntitySet Name="RejectAdjustmentDatas" EntityType="Self.RejectAdjustmentData" />
+    <EntitySet Name="RejectBudgetDatas" EntityType="Self.RejectBudgetData" />
+    <EntitySet Name="STG_ACTUALS" EntityType="Self.STG_ACTUALS" />
+    <EntitySet Name="stg_actuals_20160627" EntityType="Self.stg_actuals_20160627" />
+    <EntitySet Name="STG_ACTUALS_20160722" EntityType="Self.STG_ACTUALS_20160722" />
+    <EntitySet Name="STG_ACTUALS_20161021" EntityType="Self.STG_ACTUALS_20161021" />
+    <EntitySet Name="STG_ACTUALS_BKP_20170209" EntityType="Self.STG_ACTUALS_BKP_20170209" />
+    <EntitySet Name="STG_ACTUALS_preDiv1000" EntityType="Self.STG_ACTUALS_preDiv1000" />
+    <EntitySet Name="STG_ACTUALS_Travel" EntityType="Self.STG_ACTUALS_Travel" />
+    <EntitySet Name="STG_ACTUALS_US_NA_ISA" EntityType="Self.STG_ACTUALS_US_NA_ISA" />
+    <EntitySet Name="STG_ADJUSTMENTS" EntityType="Self.STG_ADJUSTMENTS" />
+    <EntitySet Name="STG_ADJUSTMENTS_20161116" EntityType="Self.STG_ADJUSTMENTS_20161116" />
+    <EntitySet Name="STG_ADJUSTMENTS_ISA" EntityType="Self.STG_ADJUSTMENTS_ISA" />
+    <EntitySet Name="STG_BUDGET" EntityType="Self.STG_BUDGET" />
+    <EntitySet Name="stg_budget_20160627" EntityType="Self.stg_budget_20160627" />
+    <EntitySet Name="STG_BUDGET_20160719" EntityType="Self.STG_BUDGET_20160719" />
+    <EntitySet Name="STG_BUDGET_BKP_20170209" EntityType="Self.STG_BUDGET_BKP_20170209" />
+    <EntitySet Name="stg_budget_Travel" EntityType="Self.stg_budget_Travel" />
+    <EntitySet Name="stg_comments" EntityType="Self.stg_comments" />
+    <EntitySet Name="stg_comments_isa" EntityType="Self.stg_comments_isa" />
+    <EntitySet Name="STG_COMMENTS_ISA_20160812" EntityType="Self.STG_COMMENTS_ISA_20160812" />
+    <EntitySet Name="STG_ETL_Logs" EntityType="Self.STG_ETL_Logs" />
+    <EntitySet Name="STG_ETL_Parameters_BKP_20170209" EntityType="Self.STG_ETL_Parameters_BKP_20170209" />
+    <EntitySet Name="STG_FINANCIALS" EntityType="Self.STG_FINANCIALS" />
+    <EntitySet Name="stg_Headcount" EntityType="Self.stg_Headcount" />
+    <EntitySet Name="TMP_Actuals" EntityType="Self.TMP_Actuals" />
+    <EntitySet Name="TMP_Actuals_BKP_20170209" EntityType="Self.TMP_Actuals_BKP_20170209" />
+    <EntitySet Name="TMP_ADJUSTMENTS" EntityType="Self.TMP_ADJUSTMENTS" />
+    <EntitySet Name="TMP_Budget" EntityType="Self.TMP_Budget" />
+    <EntitySet Name="BHSI_ACCOR_FINANCE_DATA_Adi" EntityType="Self.BHSI_ACCOR_FINANCE_DATA_Adi" />
+    <EntitySet Name="BHSI_ACCOR_FINANCE_DATA_SHATRU" EntityType="Self.BHSI_ACCOR_FINANCE_DATA_SHATRU" />
+    <EntitySet Name="BHSI_ACCOR_FINANCE_DATA_SHATRU_test" EntityType="Self.BHSI_ACCOR_FINANCE_DATA_SHATRU_test" />
+    <EntitySet Name="dimReportLists" EntityType="Self.dimReportList" />
+    <EntitySet Name="VW_ADJUSTMENTREPORT" EntityType="Self.VW_ADJUSTMENTREPORT" />
+    <EntitySet Name="vw_calc_Acquisition_Expense" EntityType="Self.vw_calc_Acquisition_Expense" />
+    <EntitySet Name="vw_calc_Acquisition_Expenses_Incurred" EntityType="Self.vw_calc_Acquisition_Expenses_Incurred" />
+    <EntitySet Name="vw_calc_DAC_Adjustment" EntityType="Self.vw_calc_DAC_Adjustment" />
+    <EntitySet Name="vw_calc_GAAP_Income" EntityType="Self.vw_calc_GAAP_Income" />
+    <EntitySet Name="vw_calc_Loss_Expenses_Incurred" EntityType="Self.vw_calc_Loss_Expenses_Incurred" />
+    <EntitySet Name="vw_calc_Losses_Incurred" EntityType="Self.vw_calc_Losses_Incurred" />
+    <EntitySet Name="vw_calc_Total_Loss_Incurred" EntityType="Self.vw_calc_Total_Loss_Incurred" />
+    <EntitySet Name="vw_calc_Total_Operating_Expense" EntityType="Self.vw_calc_Total_Operating_Expense" />
+    <EntitySet Name="vw_calc_ULAE_Incurred" EntityType="Self.vw_calc_ULAE_Incurred" />
+    <EntitySet Name="vw_calc_Unearned_Premium" EntityType="Self.vw_calc_Unearned_Premium" />
+    <EntitySet Name="vw_calc_UW_Expenses_Incurred" EntityType="Self.vw_calc_UW_Expenses_Incurred" />
+    <FunctionImport Name="Split" IsComposable="true" ReturnType="Collection(BHSI_FINANCEModel.Split_Result)">
+      <Parameter Name="String" Mode="In" Type="String" />
+      <Parameter Name="Delimiter" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ufnQtrList" IsComposable="true" ReturnType="Collection(BHSI_FINANCEModel.ufnQtrList_Result)" />
+    <FunctionImport Name="USP_ACCOR_POP_HISTRICAL_DATA" />
+    <FunctionImport Name="USP_AccordionJob">
+      <Parameter Name="p_ProcessType" Mode="In" Type="String" />
+      <Parameter Name="p_QtrLabel" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="USP_GET_Accordion_Parameters" ReturnType="Collection(BHSI_FINANCEModel.USP_GET_Accordion_Parameters_Result)">
+      <Parameter Name="p_ETlJobName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="USP_GET_FINANCE_DATA" ReturnType="Collection(BHSI_FINANCEModel.USP_GET_FINANCE_DATA_Result)">
+      <Parameter Name="vCountryName" Mode="In" Type="String" />
+      <Parameter Name="vProductLineName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="USP_INS_ACCRUAL">
+      <Parameter Name="pQtr" Mode="In" Type="DateTime" />
+      <Parameter Name="pRegionName" Mode="In" Type="String" />
+      <Parameter Name="pProductLineName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="USP_INS_ACCRUALPRIOR">
+      <Parameter Name="pQtr" Mode="In" Type="DateTime" />
+      <Parameter Name="pRegionName" Mode="In" Type="String" />
+      <Parameter Name="pProductLineName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="USP_INS_ProcessLog">
+      <Parameter Name="p_JobID" Mode="In" Type="Int32" />
+      <Parameter Name="p_ProcessType" Mode="In" Type="String" />
+      <Parameter Name="p_ProcessStatus" Mode="In" Type="String" />
+      <Parameter Name="p_ProcessLogMessage" Mode="In" Type="String" />
+      <Parameter Name="p_Inserted_Rows" Mode="In" Type="Int32" />
+      <Parameter Name="p_Processed_Rows" Mode="In" Type="Int32" />
+      <Parameter Name="p_Updated_Rows" Mode="In" Type="Int32" />
+      <Parameter Name="p_Reject_Rows" Mode="In" Type="Int32" />
+      <Parameter Name="p_LogUser" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="USP_PRIORREPORT" ReturnType="Collection(BHSI_FINANCEModel.USP_PRIORREPORT_Result)">
+      <Parameter Name="pQtr" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="USP_PRIORS">
+      <Parameter Name="pQtr" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="USP_Processed_RejectedRows" ReturnType="Collection(BHSI_FINANCEModel.USP_Processed_RejectedRows_Result)" />
+    <FunctionImport Name="USP_Processed_RejectionReason_BKP" ReturnType="Collection(BHSI_FINANCEModel.USP_Processed_RejectionReason_BKP_Result)" />
+    <FunctionImport Name="USP_Rejected_Rows_Count" ReturnType="Collection(Int32)">
+      <Parameter Name="p_JobId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="USP_ReportList" ReturnType="Collection(BHSI_FINANCEModel.USP_ReportList_Result)">
+      <Parameter Name="pQtr" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="USP_SEND_MAIL">
+      <Parameter Name="p_JOBID" Mode="In" Type="Int32" />
+      <Parameter Name="p_ProcessType" Mode="In" Type="String" />
+      <Parameter Name="p_Processed_Rows" Mode="In" Type="Int32" />
+      <Parameter Name="p_Inserted_Rows" Mode="In" Type="Int32" />
+      <Parameter Name="p_Updated_Rows" Mode="In" Type="Int32" />
+      <Parameter Name="p_Reject_Rows" Mode="In" Type="Int32" />
+      <Parameter Name="p_PROFILE_NAME" Mode="In" Type="String" />
+      <Parameter Name="p_RECIPIENTS" Mode="In" Type="String" />
+      <Parameter Name="p_SUBJECT" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="USP_TEST_JSON">
+      <Parameter Name="RegionLabel" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="USP_TEST_XMLROOT">
+      <Parameter Name="RegionLabel" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="USP_TEST_XMLSPLIT">
+      <Parameter Name="RegionLabel" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="USP_TRUNC_CRT_TMPTables">
+      <Parameter Name="p_ProcessType" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="USP_TRUNCATE_STAGE_TABLES" />
+    <FunctionImport Name="USP_GET_FINANCE_DATA_SH" ReturnType="Collection(BHSI_FINANCEModel.USP_GET_FINANCE_DATA_SH_Result)">
+      <Parameter Name="vCountryName" Mode="In" Type="String" />
+      <Parameter Name="vProductLineName" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="USP_GET_Accordion_Parameters_Result">
+    <Property Type="String" Name="ActualFolder" Nullable="true" MaxLength="400" />
+    <Property Type="String" Name="AdjustmentFolder" Nullable="true" MaxLength="400" />
+    <Property Type="String" Name="ArchiveFolder" Nullable="true" MaxLength="400" />
+    <Property Type="String" Name="BudgetFolder" Nullable="true" MaxLength="400" />
+    <Property Type="String" Name="MacroName" Nullable="true" MaxLength="400" />
+    <Property Type="String" Name="MacroWBPath" Nullable="true" MaxLength="400" />
+    <Property Type="String" Name="EMAIL_PROFILE_NAME" Nullable="true" MaxLength="400" />
+    <Property Type="String" Name="FAILURE_BODY" Nullable="true" MaxLength="400" />
+    <Property Type="String" Name="FAILURE_RECIPIENTS" Nullable="true" MaxLength="400" />
+    <Property Type="String" Name="FAILURE_SUBJECT" Nullable="true" MaxLength="400" />
+    <Property Type="String" Name="SUCCESS_BODY" Nullable="true" MaxLength="400" />
+    <Property Type="String" Name="SUCCESS_RECIPIENTS" Nullable="true" MaxLength="400" />
+    <Property Type="String" Name="SUCCESS_SUBJECT" Nullable="true" MaxLength="400" />
+    <Property Type="String" Name="CURRENT_PROCESS_TYPE" Nullable="true" MaxLength="400" />
+    <Property Type="String" Name="QtrLabel" Nullable="true" MaxLength="400" />
+    <Property Type="Int32" Name="JobID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="USP_GET_FINANCE_DATA_Result">
+    <Property Type="String" Name="Country" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Product" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Accounts" Nullable="true" MaxLength="128" />
+    <Property Type="Decimal" Name="Actual_Q3_2013" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Actual_Q4_2013" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Actual_FY_2013" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Actual_Q1_2014" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Actual_Q2_2014" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Actual_6mo_2014" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Actual_Q3_2014" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Actual_9mo_2014" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Actual_Q4_2014" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Actual_YTD_2014" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Actual_Q1_2015" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Actual_Q2_2015" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Actual_6mo_2015" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Actual_Q3_2015" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Actual_9mo_2015" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Actual_Q4_2015" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Actual_YTD_2015" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Budget_Q1_2016" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Budget_Q2_2016" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Budget_6mo_2016" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Budget_Q3_2016" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Budget_9mo_2016" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Budget_Q4_2016" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Budget_YTD_2016" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Forecast_ITD" Nullable="true" Precision="38" Scale="4" />
+  </ComplexType>
+  <ComplexType Name="USP_PRIORREPORT_Result">
+    <Property Type="String" Name="Measure" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="QtrActuals" Nullable="true" Precision="19" />
+    <Property Type="Decimal" Name="PriorActuals" Nullable="true" Precision="19" />
+  </ComplexType>
+  <ComplexType Name="USP_Processed_RejectedRows_Result">
+    <Property Type="String" Name="Col1" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Col2" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Col3" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Col4" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Col5" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Col6" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Col7" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Col8" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Col9" Nullable="true" />
+    <Property Type="String" Name="Col10" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Col11" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Col12" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="USP_Processed_RejectionReason_BKP_Result">
+    <Property Type="String" Name="Col1" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Col2" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Col3" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Col4" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Col5" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Col6" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Col7" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Col8" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Col9" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Col10" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="col11" Nullable="true" />
+    <Property Type="Int32" Name="Col12" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="USP_ReportList_Result">
+    <Property Type="Int32" Name="RowID" Nullable="false" />
+    <Property Type="String" Name="ReportCategory" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="ReportName" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="ReportOrder" Nullable="false" />
+    <Property Type="String" Name="RegionLabel" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="QTD_YTD_ITD" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="ProductLabel" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="ReportPageName" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="ReportHeading" Nullable="false" MaxLength="256" />
+    <Property Type="Boolean" Name="MGT_RPT_IND" Nullable="true" />
+    <Property Type="Boolean" Name="DAC_RPT_IND" Nullable="true" />
+    <Property Type="DateTime" Name="CreateDate" Nullable="false" Precision="16" />
+    <Property Type="DateTime" Name="LastUpdateDate" Nullable="true" Precision="16" />
+    <Property Type="DateTime" Name="EffectiveDate" Nullable="true" />
+    <Property Type="DateTime" Name="ExpiryDate" Nullable="true" />
+    <Property Type="Int32" Name="SortOrder" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="USP_GET_FINANCE_DATA_SH_Result">
+    <Property Type="String" Name="Financial_Measures" Nullable="true" MaxLength="128" />
+    <Property Type="Decimal" Name="Actual_Q3_2013" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Actual_Q4_2013" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Actual_FY_2013" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Actual_Q1_2014" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Actual_Q2_2014" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Actual_6mo_2014" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Actual_Q3_2014" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Actual_9mo_2014" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Actual_Q4_2014" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Actual_YTD_2013" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Actual_Q1_2015" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Actual_Q2_2015" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Actual_6mo_2015" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Actual_Q3_2015" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Actual_9mo_2015" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Actual_Q4_2015" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Actual_YTD_2015" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Budget_Q1_2016" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Budget_Q2_2016" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Budget_6mo_2016" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Budget_Q3_2016" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Budget_9mo_2016" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Budget_Q4_2016" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Budget_YTD_2016" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Forecast_ITD" Nullable="true" Precision="38" Scale="4" />
+  </ComplexType>
+</Schema>

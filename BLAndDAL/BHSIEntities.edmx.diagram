@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3796a82ce78840769ab3e720de92599b" Name="Diagram1">
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.STG_ETL_Parameters" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.user" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.BHSI_ACCOR_FINANCE_DATA" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.dimMeasure" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.dimMeasure_20160909" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.dimMeasure_ISA_20160812" Width="1.5" PointX="6.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.dimMeasureSubGroup" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.dimMeasureSubGroup_20160909" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.dimPage" Width="1.5" PointX="8.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.dimProduct" Width="1.5" PointX="6.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.DIMPRODUCT_20160909" Width="1.5" PointX="8.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.dimproduct_bkp_28102016" Width="1.5" PointX="2.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.dimProduct_ISA_20160812" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.dimQtr" Width="1.5" PointX="10.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.DimQtr_bkp" Width="1.5" PointX="10.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.dimRegion" Width="1.5" PointX="8.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.dimRegion_20160909" Width="1.5" PointX="10.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.dimRegion_ISA_20160812" Width="1.5" PointX="4.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.dimReportMaster" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.dimSubProduct" Width="1.5" PointX="0.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.EXCLUSION_MEASURE" Width="1.5" PointX="12.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.group_rights" Width="1.5" PointX="12.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.group_rights_mapper" Width="1.5" PointX="10.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.group" Width="1.5" PointX="12.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.RejectActualData" Width="1.5" PointX="6.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.RejectAdjustmentData" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.RejectBudgetData" Width="1.5" PointX="2.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.STG_ACTUALS" Width="1.5" PointX="14.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.stg_actuals_20160627" Width="1.5" PointX="14.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.STG_ACTUALS_20160722" Width="1.5" PointX="14.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.STG_ACTUALS_20161021" Width="1.5" PointX="12.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.STG_ACTUALS_BKP_20170209" Width="1.5" PointX="14.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.STG_ACTUALS_preDiv1000" Width="1.5" PointX="8.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.STG_ACTUALS_Travel" Width="1.5" PointX="16.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.STG_ACTUALS_US_NA_ISA" Width="1.5" PointX="16.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.STG_ADJUSTMENTS" Width="1.5" PointX="16.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.STG_ADJUSTMENTS_20161116" Width="1.5" PointX="16.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.STG_ADJUSTMENTS_ISA" Width="1.5" PointX="16.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.STG_BUDGET" Width="1.5" PointX="4.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.stg_budget_20160627" Width="1.5" PointX="10.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.STG_BUDGET_20160719" Width="1.5" PointX="12.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.STG_BUDGET_BKP_20170209" Width="1.5" PointX="18.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.stg_budget_Travel" Width="1.5" PointX="0.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.stg_comments" Width="1.5" PointX="18.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.stg_comments_isa" Width="1.5" PointX="18.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.STG_COMMENTS_ISA_20160812" Width="1.5" PointX="6.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.STG_ETL_Logs" Width="1.5" PointX="18.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.STG_ETL_Parameters_BKP_20170209" Width="1.5" PointX="18.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.STG_FINANCIALS" Width="1.5" PointX="14.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.stg_Headcount" Width="1.5" PointX="18.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.TMP_Actuals" Width="1.5" PointX="16.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.TMP_Actuals_BKP_20170209" Width="1.5" PointX="18.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.TMP_ADJUSTMENTS" Width="1.5" PointX="20.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.TMP_Budget" Width="1.5" PointX="2.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.BHSI_ACCOR_FINANCE_DATA_Adi" Width="1.5" PointX="20.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.BHSI_ACCOR_FINANCE_DATA_SHATRU" Width="1.5" PointX="8.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.BHSI_ACCOR_FINANCE_DATA_SHATRU_test" Width="1.5" PointX="10.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.dimReportList" Width="1.5" PointX="20.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.VW_ADJUSTMENTREPORT" Width="1.5" PointX="20.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.vw_calc_Acquisition_Expense" Width="1.5" PointX="20.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.vw_calc_Acquisition_Expenses_Incurred" Width="1.5" PointX="4.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.vw_calc_DAC_Adjustment" Width="1.5" PointX="12.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.vw_calc_GAAP_Income" Width="1.5" PointX="22.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.vw_calc_Loss_Expenses_Incurred" Width="1.5" PointX="22.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.vw_calc_Losses_Incurred" Width="1.5" PointX="22.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.vw_calc_Total_Loss_Incurred" Width="1.5" PointX="22.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.vw_calc_Total_Operating_Expense" Width="1.5" PointX="14.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.vw_calc_ULAE_Incurred" Width="1.5" PointX="22.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.vw_calc_Unearned_Premium" Width="1.5" PointX="16.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BHSI_FINANCEModel.vw_calc_UW_Expenses_Incurred" Width="1.5" PointX="22.75" PointY="20.75" IsExpanded="true" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

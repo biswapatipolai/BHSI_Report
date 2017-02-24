@@ -1,0 +1,1335 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BHSI_FINANCEModelStoreContainer" CdmEntityContainer="BHSI_FINANCEEntities">
+    <EntitySetMapping Name="STG_ETL_Parameters">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.STG_ETL_Parameters">
+        <MappingFragment StoreEntitySet="STG_ETL_Parameters">
+          <ScalarProperty Name="ETLJobName" ColumnName="ETLJobName" />
+          <ScalarProperty Name="ParameterName" ColumnName="ParameterName" />
+          <ScalarProperty Name="ParameterValue" ColumnName="ParameterValue" />
+          <ScalarProperty Name="ParameterDataType" ColumnName="ParameterDataType" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.user">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="EMAIL_ID" ColumnName="EMAIL_ID" />
+          <ScalarProperty Name="FIRSTNAME" ColumnName="FIRSTNAME" />
+          <ScalarProperty Name="LASTNAME" ColumnName="LASTNAME" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="GROUP_ID" ColumnName="GROUP_ID" />
+          <ScalarProperty Name="USER_STATUS" ColumnName="USER_STATUS" />
+          <ScalarProperty Name="CREATED_ON" ColumnName="CREATED_ON" />
+          <ScalarProperty Name="MODIFIED_ON" ColumnName="MODIFIED_ON" />
+          <ScalarProperty Name="CREATED_BY_ID" ColumnName="CREATED_BY_ID" />
+          <ScalarProperty Name="MODIFIED_BY_ID" ColumnName="MODIFIED_BY_ID" />
+          <ScalarProperty Name="uid" ColumnName="uid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BHSI_ACCOR_FINANCE_DATA">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.BHSI_ACCOR_FINANCE_DATA">
+        <MappingFragment StoreEntitySet="BHSI_ACCOR_FINANCE_DATA">
+          <ScalarProperty Name="RECORD_ID" ColumnName="RECORD_ID" />
+          <ScalarProperty Name="QuarterName" ColumnName="QuarterName" />
+          <ScalarProperty Name="MeasureType" ColumnName="MeasureType" />
+          <ScalarProperty Name="YYYY" ColumnName="YYYY" />
+          <ScalarProperty Name="QQ" ColumnName="QQ" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="ProductLineName" ColumnName="ProductLineName" />
+          <ScalarProperty Name="Net_Premiums_Written" ColumnName="Net Premiums Written" />
+          <ScalarProperty Name="Net_Premiums_Earned" ColumnName="Net Premiums Earned" />
+          <ScalarProperty Name="Other_Income" ColumnName="Other Income" />
+          <ScalarProperty Name="Losses_Incurred__IL_LAE_" ColumnName="Losses Incurred (IL&amp;LAE)" />
+          <ScalarProperty Name="Commission_Paid__Acquisition_Expenses_" ColumnName="Commission Paid (Acquisition Expenses)" />
+          <ScalarProperty Name="Acquisition_DAC" ColumnName="Acquisition DAC" />
+          <ScalarProperty Name="Acquisition_DAC___Prior" ColumnName="Acquisition DAC - Prior" />
+          <ScalarProperty Name="Acq__post_DAC" ColumnName="Acq. post DAC" />
+          <ScalarProperty Name="GAAP_Income" ColumnName="GAAP Income" />
+          <ScalarProperty Name="Inception_to_Date" ColumnName="Inception to Date" />
+          <ScalarProperty Name="Losses_Paid" ColumnName="Losses Paid" />
+          <ScalarProperty Name="Loss_Case_Reserves" ColumnName="Loss Case Reserves" />
+          <ScalarProperty Name="Loss_IBNR" ColumnName="Loss IBNR" />
+          <ScalarProperty Name="Allocated_Expenses_Pd" ColumnName="Allocated Expenses Pd" />
+          <ScalarProperty Name="Loss_Expense_Case_Reserves" ColumnName="Loss Expense Case Reserves" />
+          <ScalarProperty Name="Expense_IBNR_Reserves" ColumnName="Expense IBNR Reserves" />
+          <ScalarProperty Name="Loss_Expenses_Incurred" ColumnName="Loss Expenses Incurred" />
+          <ScalarProperty Name="ULAE_Pd" ColumnName="ULAE Pd" />
+          <ScalarProperty Name="ULAE_Reserves" ColumnName="ULAE Reserves" />
+          <ScalarProperty Name="ULAE_Incurred" ColumnName="ULAE Incurred" />
+          <ScalarProperty Name="Premium_Based_Exp__Paid" ColumnName="Premium Based Exp. Paid" />
+          <ScalarProperty Name="Commission_Accrual" ColumnName="Commission Accrual" />
+          <ScalarProperty Name="Premium_Based_Exp__Accrual" ColumnName="Premium Based Exp. Accrual" />
+          <ScalarProperty Name="Operating_Expenses_Allocated" ColumnName="Operating Expenses Allocated" />
+          <ScalarProperty Name="Operating_Expenses_Direct" ColumnName="Operating Expenses Direct" />
+          <ScalarProperty Name="Operating_Exp_DAC" ColumnName="Operating Exp DAC" />
+          <ScalarProperty Name="Operating_Exp_post_DAC" ColumnName="Operating Exp post DAC" />
+          <ScalarProperty Name="GAAP_Income___FD" ColumnName="GAAP Income - FD" />
+          <ScalarProperty Name="Inception_to_Date___FD" ColumnName="Inception to Date - FD" />
+          <ScalarProperty Name="Unearned_Premium_Change" ColumnName="Unearned Premium Change" />
+          <ScalarProperty Name="Other_U_W_Expense_Paid" ColumnName="Other U/W Expense Paid" />
+          <ScalarProperty Name="U_W_Expense_Reserves" ColumnName="U/W Expense Reserves" />
+          <ScalarProperty Name="Agents_Balances" ColumnName="Agents Balances" />
+          <ScalarProperty Name="Investment_in_Travel___Assist" ColumnName="Investment in Travel &amp; Assist" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dimMeasures">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.dimMeasure">
+        <MappingFragment StoreEntitySet="dimMeasure">
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="MeasureId" ColumnName="MeasureId" />
+          <ScalarProperty Name="OrignalMeasure" ColumnName="OrignalMeasure" />
+          <ScalarProperty Name="Measure" ColumnName="Measure" />
+          <ScalarProperty Name="Mgt" ColumnName="Mgt" />
+          <ScalarProperty Name="FullDac" ColumnName="FullDac" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="Expense" ColumnName="Expense" />
+          <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+          <ScalarProperty Name="SrcMeasureAlias" ColumnName="SrcMeasureAlias" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dimMeasure_20160909">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.dimMeasure_20160909">
+        <MappingFragment StoreEntitySet="dimMeasure_20160909">
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="MeasureId" ColumnName="MeasureId" />
+          <ScalarProperty Name="OrignalMeasure" ColumnName="OrignalMeasure" />
+          <ScalarProperty Name="Measure" ColumnName="Measure" />
+          <ScalarProperty Name="Mgt" ColumnName="Mgt" />
+          <ScalarProperty Name="FullDac" ColumnName="FullDac" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="Expense" ColumnName="Expense" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dimMeasure_ISA_20160812">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.dimMeasure_ISA_20160812">
+        <MappingFragment StoreEntitySet="dimMeasure_ISA_20160812">
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="MeasureId" ColumnName="MeasureId" />
+          <ScalarProperty Name="OrignalMeasure" ColumnName="OrignalMeasure" />
+          <ScalarProperty Name="Measure" ColumnName="Measure" />
+          <ScalarProperty Name="Mgt" ColumnName="Mgt" />
+          <ScalarProperty Name="FullDac" ColumnName="FullDac" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="Expense" ColumnName="Expense" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dimMeasureSubGroups">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.dimMeasureSubGroup">
+        <MappingFragment StoreEntitySet="dimMeasureSubGroup">
+          <ScalarProperty Name="RowID_" ColumnName="RowID " />
+          <ScalarProperty Name="MeasureSubGroupId" ColumnName="MeasureSubGroupId" />
+          <ScalarProperty Name="MeasureSubGroupName" ColumnName="MeasureSubGroupName" />
+          <ScalarProperty Name="MeasureId" ColumnName="MeasureId" />
+          <ScalarProperty Name="Multiplier" ColumnName="Multiplier" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+          <ScalarProperty Name="ACT_BDG_IND" ColumnName="ACT_BDG_IND" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dimMeasureSubGroup_20160909">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.dimMeasureSubGroup_20160909">
+        <MappingFragment StoreEntitySet="dimMeasureSubGroup_20160909">
+          <ScalarProperty Name="RowID_" ColumnName="RowID " />
+          <ScalarProperty Name="MeasureSubGroupId" ColumnName="MeasureSubGroupId" />
+          <ScalarProperty Name="MeasureSubGroupName" ColumnName="MeasureSubGroupName" />
+          <ScalarProperty Name="MeasureId" ColumnName="MeasureId" />
+          <ScalarProperty Name="Multiplier" ColumnName="Multiplier" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+          <ScalarProperty Name="ACT_BDG_IND" ColumnName="ACT_BDG_IND" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dimPages">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.dimPage">
+        <MappingFragment StoreEntitySet="dimPage">
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="PageID" ColumnName="PageID" />
+          <ScalarProperty Name="PageName" ColumnName="PageName" />
+          <ScalarProperty Name="PageLabel" ColumnName="PageLabel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dimProducts">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.dimProduct">
+        <MappingFragment StoreEntitySet="dimProduct">
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Product" ColumnName="Product" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="ProductLabel" ColumnName="ProductLabel" />
+          <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+          <ScalarProperty Name="SrcProductAlias" ColumnName="SrcProductAlias" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DIMPRODUCT_20160909">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.DIMPRODUCT_20160909">
+        <MappingFragment StoreEntitySet="DIMPRODUCT_20160909">
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Product" ColumnName="Product" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="ProductLabel" ColumnName="ProductLabel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dimproduct_bkp_28102016">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.dimproduct_bkp_28102016">
+        <MappingFragment StoreEntitySet="dimproduct_bkp_28102016">
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Product" ColumnName="Product" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="ProductLabel" ColumnName="ProductLabel" />
+          <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dimProduct_ISA_20160812">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.dimProduct_ISA_20160812">
+        <MappingFragment StoreEntitySet="dimProduct_ISA_20160812">
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Product" ColumnName="Product" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="ProductLabel" ColumnName="ProductLabel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dimQtrs">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.dimQtr">
+        <MappingFragment StoreEntitySet="dimQtr">
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="QtrID" ColumnName="QtrID" />
+          <ScalarProperty Name="Qtr" ColumnName="Qtr" />
+          <ScalarProperty Name="QtrLabel" ColumnName="QtrLabel" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DimQtr_bkp">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.DimQtr_bkp">
+        <MappingFragment StoreEntitySet="DimQtr_bkp">
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="QtrID" ColumnName="QtrID" />
+          <ScalarProperty Name="Qtr" ColumnName="Qtr" />
+          <ScalarProperty Name="QtrLabel" ColumnName="QtrLabel" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dimRegions">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.dimRegion">
+        <MappingFragment StoreEntitySet="dimRegion">
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="RegionLabel" ColumnName="RegionLabel" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="Continent" ColumnName="Continent" />
+          <ScalarProperty Name="SrcRegionAlias" ColumnName="SrcRegionAlias" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dimRegion_20160909">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.dimRegion_20160909">
+        <MappingFragment StoreEntitySet="dimRegion_20160909">
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="RegionLabel" ColumnName="RegionLabel" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="Continent" ColumnName="Continent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dimRegion_ISA_20160812">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.dimRegion_ISA_20160812">
+        <MappingFragment StoreEntitySet="dimRegion_ISA_20160812">
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="RegionLabel" ColumnName="RegionLabel" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="Continent" ColumnName="Continent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dimReportMasters">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.dimReportMaster">
+        <MappingFragment StoreEntitySet="dimReportMaster">
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="ReportCategory" ColumnName="ReportCategory" />
+          <ScalarProperty Name="ReportName" ColumnName="ReportName" />
+          <ScalarProperty Name="ReportOrder" ColumnName="ReportOrder" />
+          <ScalarProperty Name="RegionId" ColumnName="RegionId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="QTD_YTD_ITD" ColumnName="QTD_YTD_ITD" />
+          <ScalarProperty Name="ReportPageName" ColumnName="ReportPageName" />
+          <ScalarProperty Name="ReportHeading" ColumnName="ReportHeading" />
+          <ScalarProperty Name="MGT_RPT_IND" ColumnName="MGT_RPT_IND" />
+          <ScalarProperty Name="DAC_RPT_IND" ColumnName="DAC_RPT_IND" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dimSubProducts">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.dimSubProduct">
+        <MappingFragment StoreEntitySet="dimSubProduct">
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="SubProductId" ColumnName="SubProductId" />
+          <ScalarProperty Name="SubProductName" ColumnName="SubProductName" />
+          <ScalarProperty Name="SubProductLabel" ColumnName="SubProductLabel" />
+          <ScalarProperty Name="SrcSubProductAlias" ColumnName="SrcSubProductAlias" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EXCLUSION_MEASURE">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.EXCLUSION_MEASURE">
+        <MappingFragment StoreEntitySet="EXCLUSION_MEASURE">
+          <ScalarProperty Name="RowId" ColumnName="RowId" />
+          <ScalarProperty Name="MeasureId" ColumnName="MeasureId" />
+          <ScalarProperty Name="Measure" ColumnName="Measure" />
+          <ScalarProperty Name="SrcMeasureAlias" ColumnName="SrcMeasureAlias" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="group_rights">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.group_rights">
+        <MappingFragment StoreEntitySet="group_rights">
+          <ScalarProperty Name="GROUP_RIGHTS_ID" ColumnName="GROUP_RIGHTS_ID" />
+          <ScalarProperty Name="GROUP_RIGHTS_NAME" ColumnName="GROUP_RIGHTS_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="group_rights_mapper">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.group_rights_mapper">
+        <MappingFragment StoreEntitySet="group_rights_mapper">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="GROUP_ID" ColumnName="GROUP_ID" />
+          <ScalarProperty Name="GROUP_RIGHTS_ID" ColumnName="GROUP_RIGHTS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="groups">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.group">
+        <MappingFragment StoreEntitySet="groups">
+          <ScalarProperty Name="GROUP_ID" ColumnName="GROUP_ID" />
+          <ScalarProperty Name="GROUP_NAME" ColumnName="GROUP_NAME" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="CREATED_ON" ColumnName="CREATED_ON" />
+          <ScalarProperty Name="MODIFIED_ON" ColumnName="MODIFIED_ON" />
+          <ScalarProperty Name="CREATED_BY_ID" ColumnName="CREATED_BY_ID" />
+          <ScalarProperty Name="MODIFIED_BY_ID" ColumnName="MODIFIED_BY_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RejectActualDatas">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.RejectActualData">
+        <MappingFragment StoreEntitySet="RejectActualData">
+          <ScalarProperty Name="ErrorLogID" ColumnName="ErrorLogID" />
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="Qtr" ColumnName="Qtr" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="Product" ColumnName="Product" />
+          <ScalarProperty Name="Measure" ColumnName="Measure" />
+          <ScalarProperty Name="TranType" ColumnName="TranType" />
+          <ScalarProperty Name="AmountType" ColumnName="AmountType" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="QtrID" ColumnName="QtrID" />
+          <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="MeasureID" ColumnName="MeasureID" />
+          <ScalarProperty Name="JobID" ColumnName="JobID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RejectAdjustmentDatas">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.RejectAdjustmentData">
+        <MappingFragment StoreEntitySet="RejectAdjustmentData">
+          <ScalarProperty Name="ErrorLogID" ColumnName="ErrorLogID" />
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="Qtr" ColumnName="Qtr" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="Product" ColumnName="Product" />
+          <ScalarProperty Name="Measure" ColumnName="Measure" />
+          <ScalarProperty Name="TransType" ColumnName="TransType" />
+          <ScalarProperty Name="AmountType" ColumnName="AmountType" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="QtrID" ColumnName="QtrID" />
+          <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="MeasureID" ColumnName="MeasureID" />
+          <ScalarProperty Name="JobID" ColumnName="JobID" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RejectBudgetDatas">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.RejectBudgetData">
+        <MappingFragment StoreEntitySet="RejectBudgetData">
+          <ScalarProperty Name="ErrorLogID" ColumnName="ErrorLogID" />
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="Qtr" ColumnName="Qtr" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="Product" ColumnName="Product" />
+          <ScalarProperty Name="Measure" ColumnName="Measure" />
+          <ScalarProperty Name="TranType" ColumnName="TranType" />
+          <ScalarProperty Name="AmountType" ColumnName="AmountType" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="QtrID" ColumnName="QtrID" />
+          <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="MeasureID" ColumnName="MeasureID" />
+          <ScalarProperty Name="JobID" ColumnName="JobID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STG_ACTUALS">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.STG_ACTUALS">
+        <MappingFragment StoreEntitySet="STG_ACTUALS">
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="QtrID" ColumnName="QtrID" />
+          <ScalarProperty Name="MeasureID" ColumnName="MeasureID" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="LastModifiedDate" ColumnName="LastModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="stg_actuals_20160627">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.stg_actuals_20160627">
+        <MappingFragment StoreEntitySet="stg_actuals_20160627">
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="QtrID" ColumnName="QtrID" />
+          <ScalarProperty Name="MeasureID" ColumnName="MeasureID" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STG_ACTUALS_20160722">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.STG_ACTUALS_20160722">
+        <MappingFragment StoreEntitySet="STG_ACTUALS_20160722">
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="QtrID" ColumnName="QtrID" />
+          <ScalarProperty Name="MeasureID" ColumnName="MeasureID" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STG_ACTUALS_20161021">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.STG_ACTUALS_20161021">
+        <MappingFragment StoreEntitySet="STG_ACTUALS_20161021">
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="QtrID" ColumnName="QtrID" />
+          <ScalarProperty Name="MeasureID" ColumnName="MeasureID" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="LastModifiedDate" ColumnName="LastModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STG_ACTUALS_BKP_20170209">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.STG_ACTUALS_BKP_20170209">
+        <MappingFragment StoreEntitySet="STG_ACTUALS_BKP_20170209">
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="QtrID" ColumnName="QtrID" />
+          <ScalarProperty Name="MeasureID" ColumnName="MeasureID" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="LastModifiedDate" ColumnName="LastModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STG_ACTUALS_preDiv1000">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.STG_ACTUALS_preDiv1000">
+        <MappingFragment StoreEntitySet="STG_ACTUALS_preDiv1000">
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="QtrID" ColumnName="QtrID" />
+          <ScalarProperty Name="MeasureID" ColumnName="MeasureID" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STG_ACTUALS_Travel">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.STG_ACTUALS_Travel">
+        <MappingFragment StoreEntitySet="STG_ACTUALS_Travel">
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="QtrID" ColumnName="QtrID" />
+          <ScalarProperty Name="MeasureID" ColumnName="MeasureID" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STG_ACTUALS_US_NA_ISA">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.STG_ACTUALS_US_NA_ISA">
+        <MappingFragment StoreEntitySet="STG_ACTUALS_US_NA_ISA">
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="QtrID" ColumnName="QtrID" />
+          <ScalarProperty Name="MeasureID" ColumnName="MeasureID" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STG_ADJUSTMENTS">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.STG_ADJUSTMENTS">
+        <MappingFragment StoreEntitySet="STG_ADJUSTMENTS">
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="QtrID" ColumnName="QtrID" />
+          <ScalarProperty Name="MeasureID" ColumnName="MeasureID" />
+          <ScalarProperty Name="ACT_BDG_IND" ColumnName="ACT_BDG_IND" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STG_ADJUSTMENTS_20161116">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.STG_ADJUSTMENTS_20161116">
+        <MappingFragment StoreEntitySet="STG_ADJUSTMENTS_20161116">
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="QtrID" ColumnName="QtrID" />
+          <ScalarProperty Name="MeasureID" ColumnName="MeasureID" />
+          <ScalarProperty Name="ACT_BDG_IND" ColumnName="ACT_BDG_IND" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STG_ADJUSTMENTS_ISA">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.STG_ADJUSTMENTS_ISA">
+        <MappingFragment StoreEntitySet="STG_ADJUSTMENTS_ISA">
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="QtrID" ColumnName="QtrID" />
+          <ScalarProperty Name="MeasureID" ColumnName="MeasureID" />
+          <ScalarProperty Name="ACT_BDG_IND" ColumnName="ACT_BDG_IND" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="createDate" ColumnName="createDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STG_BUDGET">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.STG_BUDGET">
+        <MappingFragment StoreEntitySet="STG_BUDGET">
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="QtrID" ColumnName="QtrID" />
+          <ScalarProperty Name="MeasureID" ColumnName="MeasureID" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="stg_budget_20160627">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.stg_budget_20160627">
+        <MappingFragment StoreEntitySet="stg_budget_20160627">
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="QtrID" ColumnName="QtrID" />
+          <ScalarProperty Name="MeasureID" ColumnName="MeasureID" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STG_BUDGET_20160719">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.STG_BUDGET_20160719">
+        <MappingFragment StoreEntitySet="STG_BUDGET_20160719">
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="QtrID" ColumnName="QtrID" />
+          <ScalarProperty Name="MeasureID" ColumnName="MeasureID" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STG_BUDGET_BKP_20170209">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.STG_BUDGET_BKP_20170209">
+        <MappingFragment StoreEntitySet="STG_BUDGET_BKP_20170209">
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="QtrID" ColumnName="QtrID" />
+          <ScalarProperty Name="MeasureID" ColumnName="MeasureID" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="stg_budget_Travel">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.stg_budget_Travel">
+        <MappingFragment StoreEntitySet="stg_budget_Travel">
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="QtrID" ColumnName="QtrID" />
+          <ScalarProperty Name="MeasureID" ColumnName="MeasureID" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="stg_comments">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.stg_comments">
+        <MappingFragment StoreEntitySet="stg_comments">
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="qtrID" ColumnName="qtrID" />
+          <ScalarProperty Name="pagename" ColumnName="pagename" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+          <ScalarProperty Name="CREATED_ON" ColumnName="CREATED_ON" />
+          <ScalarProperty Name="MODIFIED_ON" ColumnName="MODIFIED_ON" />
+          <ScalarProperty Name="CREATED_BY_ID" ColumnName="CREATED_BY_ID" />
+          <ScalarProperty Name="MODIFIED_BY_ID" ColumnName="MODIFIED_BY_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="stg_comments_isa">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.stg_comments_isa">
+        <MappingFragment StoreEntitySet="stg_comments_isa">
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="qtrID" ColumnName="qtrID" />
+          <ScalarProperty Name="pagename" ColumnName="pagename" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STG_COMMENTS_ISA_20160812">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.STG_COMMENTS_ISA_20160812">
+        <MappingFragment StoreEntitySet="STG_COMMENTS_ISA_20160812">
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="qtrID" ColumnName="qtrID" />
+          <ScalarProperty Name="pagename" ColumnName="pagename" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+          <ScalarProperty Name="CREATED_ON" ColumnName="CREATED_ON" />
+          <ScalarProperty Name="MODIFIED_ON" ColumnName="MODIFIED_ON" />
+          <ScalarProperty Name="CREATED_BY_ID" ColumnName="CREATED_BY_ID" />
+          <ScalarProperty Name="MODIFIED_BY_ID" ColumnName="MODIFIED_BY_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STG_ETL_Logs">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.STG_ETL_Logs">
+        <MappingFragment StoreEntitySet="STG_ETL_Logs">
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="JobID" ColumnName="JobID" />
+          <ScalarProperty Name="RunDate" ColumnName="RunDate" />
+          <ScalarProperty Name="ProcessType" ColumnName="ProcessType" />
+          <ScalarProperty Name="ProcessStatus" ColumnName="ProcessStatus" />
+          <ScalarProperty Name="ProcessLogMessage" ColumnName="ProcessLogMessage" />
+          <ScalarProperty Name="LogUser" ColumnName="LogUser" />
+          <ScalarProperty Name="LogTimestamp" ColumnName="LogTimestamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STG_ETL_Parameters_BKP_20170209">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.STG_ETL_Parameters_BKP_20170209">
+        <MappingFragment StoreEntitySet="STG_ETL_Parameters_BKP_20170209">
+          <ScalarProperty Name="ETLJobName" ColumnName="ETLJobName" />
+          <ScalarProperty Name="ParameterName" ColumnName="ParameterName" />
+          <ScalarProperty Name="ParameterValue" ColumnName="ParameterValue" />
+          <ScalarProperty Name="ParameterDataType" ColumnName="ParameterDataType" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STG_FINANCIALS">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.STG_FINANCIALS">
+        <MappingFragment StoreEntitySet="STG_FINANCIALS">
+          <ScalarProperty Name="Row_id" ColumnName="Row_id" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="Period" ColumnName="Period" />
+          <ScalarProperty Name="Measure" ColumnName="Measure" />
+          <ScalarProperty Name="Type_ABF" ColumnName="Type_ABF" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Product" ColumnName="Product" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="stg_Headcount">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.stg_Headcount">
+        <MappingFragment StoreEntitySet="stg_Headcount">
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="QtrId" ColumnName="QtrId" />
+          <ScalarProperty Name="Actual" ColumnName="Actual" />
+          <ScalarProperty Name="Budget" ColumnName="Budget" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TMP_Actuals">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.TMP_Actuals">
+        <MappingFragment StoreEntitySet="TMP_Actuals">
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="Qtr" ColumnName="Qtr" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="Product" ColumnName="Product" />
+          <ScalarProperty Name="Measure" ColumnName="Measure" />
+          <ScalarProperty Name="TranType" ColumnName="TranType" />
+          <ScalarProperty Name="AmountType" ColumnName="AmountType" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TMP_Actuals_BKP_20170209">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.TMP_Actuals_BKP_20170209">
+        <MappingFragment StoreEntitySet="TMP_Actuals_BKP_20170209">
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="Qtr" ColumnName="Qtr" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="Product" ColumnName="Product" />
+          <ScalarProperty Name="Measure" ColumnName="Measure" />
+          <ScalarProperty Name="TranType" ColumnName="TranType" />
+          <ScalarProperty Name="AmountType" ColumnName="AmountType" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TMP_ADJUSTMENTS">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.TMP_ADJUSTMENTS">
+        <MappingFragment StoreEntitySet="TMP_ADJUSTMENTS">
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="Qtr" ColumnName="Qtr" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="Product" ColumnName="Product" />
+          <ScalarProperty Name="Measure" ColumnName="Measure" />
+          <ScalarProperty Name="TranType" ColumnName="TranType" />
+          <ScalarProperty Name="AmountType" ColumnName="AmountType" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TMP_Budget">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.TMP_Budget">
+        <MappingFragment StoreEntitySet="TMP_Budget">
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="Qtr" ColumnName="Qtr" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="Product" ColumnName="Product" />
+          <ScalarProperty Name="Measure" ColumnName="Measure" />
+          <ScalarProperty Name="TranType" ColumnName="TranType" />
+          <ScalarProperty Name="AmountType" ColumnName="AmountType" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BHSI_ACCOR_FINANCE_DATA_Adi">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.BHSI_ACCOR_FINANCE_DATA_Adi">
+        <MappingFragment StoreEntitySet="BHSI_ACCOR_FINANCE_DATA_Adi">
+          <ScalarProperty Name="RECORD_ID" ColumnName="RECORD_ID" />
+          <ScalarProperty Name="QuarterName" ColumnName="QuarterName" />
+          <ScalarProperty Name="MeasureType" ColumnName="MeasureType" />
+          <ScalarProperty Name="YYYY" ColumnName="YYYY" />
+          <ScalarProperty Name="QQ" ColumnName="QQ" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="ProductLineName" ColumnName="ProductLineName" />
+          <ScalarProperty Name="Net_Premiums_Written" ColumnName="Net Premiums Written" />
+          <ScalarProperty Name="Net_Premiums_Earned" ColumnName="Net Premiums Earned" />
+          <ScalarProperty Name="Other_Income" ColumnName="Other Income" />
+          <ScalarProperty Name="Losses_Incurred__IL_LAE_" ColumnName="Losses Incurred (IL&amp;LAE)" />
+          <ScalarProperty Name="Commission_Paid__Acquisition_Expenses_" ColumnName="Commission Paid (Acquisition Expenses)" />
+          <ScalarProperty Name="Acquisition_DAC" ColumnName="Acquisition DAC" />
+          <ScalarProperty Name="Acquisition_DAC___Prior" ColumnName="Acquisition DAC - Prior" />
+          <ScalarProperty Name="Acq__post_DAC" ColumnName="Acq. post DAC" />
+          <ScalarProperty Name="GAAP_Income" ColumnName="GAAP Income" />
+          <ScalarProperty Name="Inception_to_Date" ColumnName="Inception to Date" />
+          <ScalarProperty Name="Losses_Paid" ColumnName="Losses Paid" />
+          <ScalarProperty Name="Loss_Case_Reserves" ColumnName="Loss Case Reserves" />
+          <ScalarProperty Name="Loss_IBNR" ColumnName="Loss IBNR" />
+          <ScalarProperty Name="Allocated_Expenses_Pd" ColumnName="Allocated Expenses Pd" />
+          <ScalarProperty Name="Loss_Expense_Case_Reserves" ColumnName="Loss Expense Case Reserves" />
+          <ScalarProperty Name="Expense_IBNR_Reserves" ColumnName="Expense IBNR Reserves" />
+          <ScalarProperty Name="Loss_Expenses_Incurred" ColumnName="Loss Expenses Incurred" />
+          <ScalarProperty Name="ULAE_Pd" ColumnName="ULAE Pd" />
+          <ScalarProperty Name="ULAE_Reserves" ColumnName="ULAE Reserves" />
+          <ScalarProperty Name="ULAE_Incurred" ColumnName="ULAE Incurred" />
+          <ScalarProperty Name="Premium_Based_Exp__Paid" ColumnName="Premium Based Exp. Paid" />
+          <ScalarProperty Name="Commission_Accrual" ColumnName="Commission Accrual" />
+          <ScalarProperty Name="Premium_Based_Exp__Accrual" ColumnName="Premium Based Exp. Accrual" />
+          <ScalarProperty Name="Operating_Expenses_Allocated" ColumnName="Operating Expenses Allocated" />
+          <ScalarProperty Name="Operating_Expenses_Direct" ColumnName="Operating Expenses Direct" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BHSI_ACCOR_FINANCE_DATA_SHATRU">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.BHSI_ACCOR_FINANCE_DATA_SHATRU">
+        <MappingFragment StoreEntitySet="BHSI_ACCOR_FINANCE_DATA_SHATRU">
+          <ScalarProperty Name="RECORD_ID" ColumnName="RECORD_ID" />
+          <ScalarProperty Name="QuarterName" ColumnName="QuarterName" />
+          <ScalarProperty Name="MeasureType" ColumnName="MeasureType" />
+          <ScalarProperty Name="YYYY" ColumnName="YYYY" />
+          <ScalarProperty Name="QQ" ColumnName="QQ" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="ProductLineName" ColumnName="ProductLineName" />
+          <ScalarProperty Name="Net_Premiums_Written" ColumnName="Net Premiums Written" />
+          <ScalarProperty Name="Net_Premiums_Earned" ColumnName="Net Premiums Earned" />
+          <ScalarProperty Name="Other_Income" ColumnName="Other Income" />
+          <ScalarProperty Name="Losses_Incurred" ColumnName="Losses Incurred" />
+          <ScalarProperty Name="Commission_Paid" ColumnName="Commission Paid" />
+          <ScalarProperty Name="Acquisition_DAC" ColumnName="Acquisition DAC" />
+          <ScalarProperty Name="Acusiition_DAC___Prior" ColumnName="Acusiition DAC - Prior" />
+          <ScalarProperty Name="Acq__post_DAC" ColumnName="Acq. post DAC" />
+          <ScalarProperty Name="Direct_Expenses" ColumnName="Direct Expenses" />
+          <ScalarProperty Name="GAAP_Income" ColumnName="GAAP Income" />
+          <ScalarProperty Name="Inception_to_Date" ColumnName="Inception to Date" />
+          <ScalarProperty Name="Operating_Expenses" ColumnName="Operating Expenses" />
+          <ScalarProperty Name="Losses_Paid" ColumnName="Losses Paid" />
+          <ScalarProperty Name="Loss_Case_Reserves" ColumnName="Loss Case Reserves" />
+          <ScalarProperty Name="Loss_IBNR" ColumnName="Loss IBNR" />
+          <ScalarProperty Name="Allocated_Expenses_Pd" ColumnName="Allocated Expenses Pd" />
+          <ScalarProperty Name="Loss_Expense_Case_Reserves" ColumnName="Loss Expense Case Reserves" />
+          <ScalarProperty Name="Expense_IBNR_Reserves" ColumnName="Expense IBNR Reserves" />
+          <ScalarProperty Name="Loss_Expenses_Incurred" ColumnName="Loss Expenses Incurred" />
+          <ScalarProperty Name="ULAE_Pd" ColumnName="ULAE Pd" />
+          <ScalarProperty Name="ULAE_Reserves" ColumnName="ULAE Reserves" />
+          <ScalarProperty Name="ULAE_Incurred" ColumnName="ULAE Incurred" />
+          <ScalarProperty Name="Premium_Based_Exp__Paid" ColumnName="Premium Based Exp. Paid" />
+          <ScalarProperty Name="Commission_Accrual" ColumnName="Commission Accrual" />
+          <ScalarProperty Name="Premium_Based_Exp__Accrual" ColumnName="Premium Based Exp. Accrual" />
+          <ScalarProperty Name="Operating_Expenses_Allocated" ColumnName="Operating Expenses Allocated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BHSI_ACCOR_FINANCE_DATA_SHATRU_test">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.BHSI_ACCOR_FINANCE_DATA_SHATRU_test">
+        <MappingFragment StoreEntitySet="BHSI_ACCOR_FINANCE_DATA_SHATRU_test">
+          <ScalarProperty Name="RECORD_ID" ColumnName="RECORD_ID" />
+          <ScalarProperty Name="QuarterName" ColumnName="QuarterName" />
+          <ScalarProperty Name="MeasureType" ColumnName="MeasureType" />
+          <ScalarProperty Name="YYYY" ColumnName="YYYY" />
+          <ScalarProperty Name="QQ" ColumnName="QQ" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="ProductLineName" ColumnName="ProductLineName" />
+          <ScalarProperty Name="Net_Premiums_Written" ColumnName="Net Premiums Written" />
+          <ScalarProperty Name="Net_Premiums_Earned" ColumnName="Net Premiums Earned" />
+          <ScalarProperty Name="Other_Income" ColumnName="Other Income" />
+          <ScalarProperty Name="Losses_Incurred" ColumnName="Losses Incurred" />
+          <ScalarProperty Name="Commission_Paid" ColumnName="Commission Paid" />
+          <ScalarProperty Name="Acquisition_DAC" ColumnName="Acquisition DAC" />
+          <ScalarProperty Name="Acusiition_DAC___Prior" ColumnName="Acusiition DAC - Prior" />
+          <ScalarProperty Name="Acq__post_DAC" ColumnName="Acq. post DAC" />
+          <ScalarProperty Name="Direct_Expenses" ColumnName="Direct Expenses" />
+          <ScalarProperty Name="GAAP_Income" ColumnName="GAAP Income" />
+          <ScalarProperty Name="Inception_to_Date" ColumnName="Inception to Date" />
+          <ScalarProperty Name="Operating_Expenses" ColumnName="Operating Expenses" />
+          <ScalarProperty Name="Losses_Paid" ColumnName="Losses Paid" />
+          <ScalarProperty Name="Loss_Case_Reserves" ColumnName="Loss Case Reserves" />
+          <ScalarProperty Name="Loss_IBNR" ColumnName="Loss IBNR" />
+          <ScalarProperty Name="Allocated_Expenses_Pd" ColumnName="Allocated Expenses Pd" />
+          <ScalarProperty Name="Loss_Expense_Case_Reserves" ColumnName="Loss Expense Case Reserves" />
+          <ScalarProperty Name="Expense_IBNR_Reserves" ColumnName="Expense IBNR Reserves" />
+          <ScalarProperty Name="Loss_Expenses_Incurred" ColumnName="Loss Expenses Incurred" />
+          <ScalarProperty Name="ULAE_Pd" ColumnName="ULAE Pd" />
+          <ScalarProperty Name="ULAE_Reserves" ColumnName="ULAE Reserves" />
+          <ScalarProperty Name="ULAE_Incurred" ColumnName="ULAE Incurred" />
+          <ScalarProperty Name="Premium_Based_Exp__Paid" ColumnName="Premium Based Exp. Paid" />
+          <ScalarProperty Name="Commission_Accrual" ColumnName="Commission Accrual" />
+          <ScalarProperty Name="Premium_Based_Exp__Accrual" ColumnName="Premium Based Exp. Accrual" />
+          <ScalarProperty Name="Operating_Expenses_Allocated" ColumnName="Operating Expenses Allocated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dimReportLists">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.dimReportList">
+        <MappingFragment StoreEntitySet="dimReportList">
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="ReportCategory" ColumnName="ReportCategory" />
+          <ScalarProperty Name="ReportName" ColumnName="ReportName" />
+          <ScalarProperty Name="ReportOrder" ColumnName="ReportOrder" />
+          <ScalarProperty Name="RegionLabel" ColumnName="RegionLabel" />
+          <ScalarProperty Name="QTD_YTD_ITD" ColumnName="QTD_YTD_ITD" />
+          <ScalarProperty Name="ProductLabel" ColumnName="ProductLabel" />
+          <ScalarProperty Name="ReportPageName" ColumnName="ReportPageName" />
+          <ScalarProperty Name="ReportHeading" ColumnName="ReportHeading" />
+          <ScalarProperty Name="MGT_RPT_IND" ColumnName="MGT_RPT_IND" />
+          <ScalarProperty Name="DAC_RPT_IND" ColumnName="DAC_RPT_IND" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_ADJUSTMENTREPORT">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.VW_ADJUSTMENTREPORT">
+        <MappingFragment StoreEntitySet="VW_ADJUSTMENTREPORT">
+          <ScalarProperty Name="Qtr" ColumnName="Qtr" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="Product" ColumnName="Product" />
+          <ScalarProperty Name="ACCOUNT" ColumnName="ACCOUNT" />
+          <ScalarProperty Name="AdjAmount" ColumnName="AdjAmount" />
+          <ScalarProperty Name="OriginalAmount" ColumnName="OriginalAmount" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ADJ_DATE" ColumnName="ADJ_DATE" />
+          <ScalarProperty Name="CLASS" ColumnName="CLASS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_calc_Acquisition_Expense">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.vw_calc_Acquisition_Expense">
+        <MappingFragment StoreEntitySet="vw_calc_Acquisition_Expense">
+          <ScalarProperty Name="RegionLabel" ColumnName="RegionLabel" />
+          <ScalarProperty Name="RegionSort" ColumnName="RegionSort" />
+          <ScalarProperty Name="continent" ColumnName="continent" />
+          <ScalarProperty Name="ProductLabel" ColumnName="ProductLabel" />
+          <ScalarProperty Name="ProductSort" ColumnName="ProductSort" />
+          <ScalarProperty Name="Qtr" ColumnName="Qtr" />
+          <ScalarProperty Name="MeasureSort" ColumnName="MeasureSort" />
+          <ScalarProperty Name="Measure" ColumnName="Measure" />
+          <ScalarProperty Name="Mgt" ColumnName="Mgt" />
+          <ScalarProperty Name="FullDac" ColumnName="FullDac" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="ActualAmt" ColumnName="ActualAmt" />
+          <ScalarProperty Name="BudgetAmt" ColumnName="BudgetAmt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_calc_Acquisition_Expenses_Incurred">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.vw_calc_Acquisition_Expenses_Incurred">
+        <MappingFragment StoreEntitySet="vw_calc_Acquisition_Expenses_Incurred">
+          <ScalarProperty Name="RegionLabel" ColumnName="RegionLabel" />
+          <ScalarProperty Name="RegionSort" ColumnName="RegionSort" />
+          <ScalarProperty Name="continent" ColumnName="continent" />
+          <ScalarProperty Name="ProductLabel" ColumnName="ProductLabel" />
+          <ScalarProperty Name="ProductSort" ColumnName="ProductSort" />
+          <ScalarProperty Name="Qtr" ColumnName="Qtr" />
+          <ScalarProperty Name="MeasureSort" ColumnName="MeasureSort" />
+          <ScalarProperty Name="Measure" ColumnName="Measure" />
+          <ScalarProperty Name="Mgt" ColumnName="Mgt" />
+          <ScalarProperty Name="FullDac" ColumnName="FullDac" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="ActualAmt" ColumnName="ActualAmt" />
+          <ScalarProperty Name="BudgetAmt" ColumnName="BudgetAmt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_calc_DAC_Adjustment">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.vw_calc_DAC_Adjustment">
+        <MappingFragment StoreEntitySet="vw_calc_DAC_Adjustment">
+          <ScalarProperty Name="RegionLabel" ColumnName="RegionLabel" />
+          <ScalarProperty Name="RegionSort" ColumnName="RegionSort" />
+          <ScalarProperty Name="continent" ColumnName="continent" />
+          <ScalarProperty Name="ProductLabel" ColumnName="ProductLabel" />
+          <ScalarProperty Name="ProductSort" ColumnName="ProductSort" />
+          <ScalarProperty Name="Qtr" ColumnName="Qtr" />
+          <ScalarProperty Name="MeasureSort" ColumnName="MeasureSort" />
+          <ScalarProperty Name="Measure" ColumnName="Measure" />
+          <ScalarProperty Name="Mgt" ColumnName="Mgt" />
+          <ScalarProperty Name="FullDac" ColumnName="FullDac" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="ActualAmt" ColumnName="ActualAmt" />
+          <ScalarProperty Name="BudgetAmt" ColumnName="BudgetAmt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_calc_GAAP_Income">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.vw_calc_GAAP_Income">
+        <MappingFragment StoreEntitySet="vw_calc_GAAP_Income">
+          <ScalarProperty Name="RegionLabel" ColumnName="RegionLabel" />
+          <ScalarProperty Name="RegionSort" ColumnName="RegionSort" />
+          <ScalarProperty Name="continent" ColumnName="continent" />
+          <ScalarProperty Name="ProductLabel" ColumnName="ProductLabel" />
+          <ScalarProperty Name="ProductSort" ColumnName="ProductSort" />
+          <ScalarProperty Name="Qtr" ColumnName="Qtr" />
+          <ScalarProperty Name="MeasureSort" ColumnName="MeasureSort" />
+          <ScalarProperty Name="Measure" ColumnName="Measure" />
+          <ScalarProperty Name="Mgt" ColumnName="Mgt" />
+          <ScalarProperty Name="FullDac" ColumnName="FullDac" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="ActualAmt" ColumnName="ActualAmt" />
+          <ScalarProperty Name="BudgetAmt" ColumnName="BudgetAmt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_calc_Loss_Expenses_Incurred">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.vw_calc_Loss_Expenses_Incurred">
+        <MappingFragment StoreEntitySet="vw_calc_Loss_Expenses_Incurred">
+          <ScalarProperty Name="RegionLabel" ColumnName="RegionLabel" />
+          <ScalarProperty Name="RegionSort" ColumnName="RegionSort" />
+          <ScalarProperty Name="continent" ColumnName="continent" />
+          <ScalarProperty Name="ProductLabel" ColumnName="ProductLabel" />
+          <ScalarProperty Name="ProductSort" ColumnName="ProductSort" />
+          <ScalarProperty Name="Qtr" ColumnName="Qtr" />
+          <ScalarProperty Name="MeasureSort" ColumnName="MeasureSort" />
+          <ScalarProperty Name="Measure" ColumnName="Measure" />
+          <ScalarProperty Name="Mgt" ColumnName="Mgt" />
+          <ScalarProperty Name="FullDac" ColumnName="FullDac" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="ActualAmt" ColumnName="ActualAmt" />
+          <ScalarProperty Name="BudgetAmt" ColumnName="BudgetAmt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_calc_Losses_Incurred">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.vw_calc_Losses_Incurred">
+        <MappingFragment StoreEntitySet="vw_calc_Losses_Incurred">
+          <ScalarProperty Name="RegionLabel" ColumnName="RegionLabel" />
+          <ScalarProperty Name="RegionSort" ColumnName="RegionSort" />
+          <ScalarProperty Name="continent" ColumnName="continent" />
+          <ScalarProperty Name="ProductLabel" ColumnName="ProductLabel" />
+          <ScalarProperty Name="ProductSort" ColumnName="ProductSort" />
+          <ScalarProperty Name="Qtr" ColumnName="Qtr" />
+          <ScalarProperty Name="MeasureSort" ColumnName="MeasureSort" />
+          <ScalarProperty Name="Measure" ColumnName="Measure" />
+          <ScalarProperty Name="Mgt" ColumnName="Mgt" />
+          <ScalarProperty Name="FullDac" ColumnName="FullDac" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="ActualAmt" ColumnName="ActualAmt" />
+          <ScalarProperty Name="BudgetAmt" ColumnName="BudgetAmt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_calc_Total_Loss_Incurred">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.vw_calc_Total_Loss_Incurred">
+        <MappingFragment StoreEntitySet="vw_calc_Total_Loss_Incurred">
+          <ScalarProperty Name="RegionLabel" ColumnName="RegionLabel" />
+          <ScalarProperty Name="RegionSort" ColumnName="RegionSort" />
+          <ScalarProperty Name="continent" ColumnName="continent" />
+          <ScalarProperty Name="ProductLabel" ColumnName="ProductLabel" />
+          <ScalarProperty Name="ProductSort" ColumnName="ProductSort" />
+          <ScalarProperty Name="Qtr" ColumnName="Qtr" />
+          <ScalarProperty Name="MeasureSort" ColumnName="MeasureSort" />
+          <ScalarProperty Name="Measure" ColumnName="Measure" />
+          <ScalarProperty Name="Mgt" ColumnName="Mgt" />
+          <ScalarProperty Name="FullDac" ColumnName="FullDac" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="ActualAmt" ColumnName="ActualAmt" />
+          <ScalarProperty Name="BudgetAmt" ColumnName="BudgetAmt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_calc_Total_Operating_Expense">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.vw_calc_Total_Operating_Expense">
+        <MappingFragment StoreEntitySet="vw_calc_Total_Operating_Expense">
+          <ScalarProperty Name="RegionLabel" ColumnName="RegionLabel" />
+          <ScalarProperty Name="RegionSort" ColumnName="RegionSort" />
+          <ScalarProperty Name="continent" ColumnName="continent" />
+          <ScalarProperty Name="ProductLabel" ColumnName="ProductLabel" />
+          <ScalarProperty Name="ProductSort" ColumnName="ProductSort" />
+          <ScalarProperty Name="Qtr" ColumnName="Qtr" />
+          <ScalarProperty Name="MeasureSort" ColumnName="MeasureSort" />
+          <ScalarProperty Name="Measure" ColumnName="Measure" />
+          <ScalarProperty Name="Mgt" ColumnName="Mgt" />
+          <ScalarProperty Name="FullDac" ColumnName="FullDac" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="ActualAmt" ColumnName="ActualAmt" />
+          <ScalarProperty Name="BudgetAmt" ColumnName="BudgetAmt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_calc_ULAE_Incurred">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.vw_calc_ULAE_Incurred">
+        <MappingFragment StoreEntitySet="vw_calc_ULAE_Incurred">
+          <ScalarProperty Name="RegionLabel" ColumnName="RegionLabel" />
+          <ScalarProperty Name="RegionSort" ColumnName="RegionSort" />
+          <ScalarProperty Name="continent" ColumnName="continent" />
+          <ScalarProperty Name="ProductLabel" ColumnName="ProductLabel" />
+          <ScalarProperty Name="ProductSort" ColumnName="ProductSort" />
+          <ScalarProperty Name="Qtr" ColumnName="Qtr" />
+          <ScalarProperty Name="MeasureSort" ColumnName="MeasureSort" />
+          <ScalarProperty Name="Measure" ColumnName="Measure" />
+          <ScalarProperty Name="Mgt" ColumnName="Mgt" />
+          <ScalarProperty Name="FullDac" ColumnName="FullDac" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="ActualAmt" ColumnName="ActualAmt" />
+          <ScalarProperty Name="BudgetAmt" ColumnName="BudgetAmt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_calc_Unearned_Premium">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.vw_calc_Unearned_Premium">
+        <MappingFragment StoreEntitySet="vw_calc_Unearned_Premium">
+          <ScalarProperty Name="RegionLabel" ColumnName="RegionLabel" />
+          <ScalarProperty Name="RegionSort" ColumnName="RegionSort" />
+          <ScalarProperty Name="continent" ColumnName="continent" />
+          <ScalarProperty Name="ProductLabel" ColumnName="ProductLabel" />
+          <ScalarProperty Name="ProductSort" ColumnName="ProductSort" />
+          <ScalarProperty Name="Qtr" ColumnName="Qtr" />
+          <ScalarProperty Name="MeasureSort" ColumnName="MeasureSort" />
+          <ScalarProperty Name="Measure" ColumnName="Measure" />
+          <ScalarProperty Name="Mgt" ColumnName="Mgt" />
+          <ScalarProperty Name="FullDac" ColumnName="FullDac" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="ActualAmt" ColumnName="ActualAmt" />
+          <ScalarProperty Name="BudgetAmt" ColumnName="BudgetAmt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_calc_UW_Expenses_Incurred">
+      <EntityTypeMapping TypeName="BHSI_FINANCEModel.vw_calc_UW_Expenses_Incurred">
+        <MappingFragment StoreEntitySet="vw_calc_UW_Expenses_Incurred">
+          <ScalarProperty Name="RegionLabel" ColumnName="RegionLabel" />
+          <ScalarProperty Name="RegionSort" ColumnName="RegionSort" />
+          <ScalarProperty Name="continent" ColumnName="continent" />
+          <ScalarProperty Name="ProductLabel" ColumnName="ProductLabel" />
+          <ScalarProperty Name="ProductSort" ColumnName="ProductSort" />
+          <ScalarProperty Name="Qtr" ColumnName="Qtr" />
+          <ScalarProperty Name="MeasureSort" ColumnName="MeasureSort" />
+          <ScalarProperty Name="Measure" ColumnName="Measure" />
+          <ScalarProperty Name="Mgt" ColumnName="Mgt" />
+          <ScalarProperty Name="FullDac" ColumnName="FullDac" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="ActualAmt" ColumnName="ActualAmt" />
+          <ScalarProperty Name="BudgetAmt" ColumnName="BudgetAmt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionName="BHSI_FINANCEModel.Store.Split" FunctionImportName="Split">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BHSI_FINANCEModel.Split_Result">
+          <ScalarProperty Name="Items" ColumnName="Items" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="BHSI_FINANCEModel.Store.ufnQtrList" FunctionImportName="ufnQtrList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BHSI_FINANCEModel.ufnQtrList_Result">
+          <ScalarProperty Name="Qtr" ColumnName="Qtr" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_ACCOR_POP_HISTRICAL_DATA" FunctionName="BHSI_FINANCEModel.Store.USP_ACCOR_POP_HISTRICAL_DATA" />
+    <FunctionImportMapping FunctionImportName="USP_AccordionJob" FunctionName="BHSI_FINANCEModel.Store.USP_AccordionJob" />
+    <FunctionImportMapping FunctionImportName="USP_GET_Accordion_Parameters" FunctionName="BHSI_FINANCEModel.Store.USP_GET_Accordion_Parameters">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BHSI_FINANCEModel.USP_GET_Accordion_Parameters_Result">
+          <ScalarProperty Name="ActualFolder" ColumnName="ActualFolder" />
+          <ScalarProperty Name="AdjustmentFolder" ColumnName="AdjustmentFolder" />
+          <ScalarProperty Name="ArchiveFolder" ColumnName="ArchiveFolder" />
+          <ScalarProperty Name="BudgetFolder" ColumnName="BudgetFolder" />
+          <ScalarProperty Name="MacroName" ColumnName="MacroName" />
+          <ScalarProperty Name="MacroWBPath" ColumnName="MacroWBPath" />
+          <ScalarProperty Name="EMAIL_PROFILE_NAME" ColumnName="EMAIL_PROFILE_NAME" />
+          <ScalarProperty Name="FAILURE_BODY" ColumnName="FAILURE_BODY" />
+          <ScalarProperty Name="FAILURE_RECIPIENTS" ColumnName="FAILURE_RECIPIENTS" />
+          <ScalarProperty Name="FAILURE_SUBJECT" ColumnName="FAILURE_SUBJECT" />
+          <ScalarProperty Name="SUCCESS_BODY" ColumnName="SUCCESS_BODY" />
+          <ScalarProperty Name="SUCCESS_RECIPIENTS" ColumnName="SUCCESS_RECIPIENTS" />
+          <ScalarProperty Name="SUCCESS_SUBJECT" ColumnName="SUCCESS_SUBJECT" />
+          <ScalarProperty Name="CURRENT_PROCESS_TYPE" ColumnName="CURRENT_PROCESS_TYPE" />
+          <ScalarProperty Name="QtrLabel" ColumnName="QtrLabel" />
+          <ScalarProperty Name="JobID" ColumnName="JobID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_GET_FINANCE_DATA" FunctionName="BHSI_FINANCEModel.Store.USP_GET_FINANCE_DATA">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BHSI_FINANCEModel.USP_GET_FINANCE_DATA_Result">
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Product" ColumnName="Product" />
+          <ScalarProperty Name="Accounts" ColumnName="Accounts" />
+          <ScalarProperty Name="Actual_Q3_2013" ColumnName="Actual Q3 2013" />
+          <ScalarProperty Name="Actual_Q4_2013" ColumnName="Actual Q4 2013" />
+          <ScalarProperty Name="Actual_FY_2013" ColumnName="Actual FY 2013" />
+          <ScalarProperty Name="Actual_Q1_2014" ColumnName="Actual Q1 2014" />
+          <ScalarProperty Name="Actual_Q2_2014" ColumnName="Actual Q2 2014" />
+          <ScalarProperty Name="Actual_6mo_2014" ColumnName="Actual 6mo 2014" />
+          <ScalarProperty Name="Actual_Q3_2014" ColumnName="Actual Q3 2014" />
+          <ScalarProperty Name="Actual_9mo_2014" ColumnName="Actual 9mo 2014" />
+          <ScalarProperty Name="Actual_Q4_2014" ColumnName="Actual Q4 2014" />
+          <ScalarProperty Name="Actual_YTD_2014" ColumnName="Actual YTD 2014" />
+          <ScalarProperty Name="Actual_Q1_2015" ColumnName="Actual Q1 2015" />
+          <ScalarProperty Name="Actual_Q2_2015" ColumnName="Actual Q2 2015" />
+          <ScalarProperty Name="Actual_6mo_2015" ColumnName="Actual 6mo 2015" />
+          <ScalarProperty Name="Actual_Q3_2015" ColumnName="Actual Q3 2015" />
+          <ScalarProperty Name="Actual_9mo_2015" ColumnName="Actual 9mo 2015" />
+          <ScalarProperty Name="Actual_Q4_2015" ColumnName="Actual Q4 2015" />
+          <ScalarProperty Name="Actual_YTD_2015" ColumnName="Actual YTD 2015" />
+          <ScalarProperty Name="Budget_Q1_2016" ColumnName="Budget Q1 2016" />
+          <ScalarProperty Name="Budget_Q2_2016" ColumnName="Budget Q2 2016" />
+          <ScalarProperty Name="Budget_6mo_2016" ColumnName="Budget 6mo 2016" />
+          <ScalarProperty Name="Budget_Q3_2016" ColumnName="Budget Q3 2016" />
+          <ScalarProperty Name="Budget_9mo_2016" ColumnName="Budget 9mo 2016" />
+          <ScalarProperty Name="Budget_Q4_2016" ColumnName="Budget Q4 2016" />
+          <ScalarProperty Name="Budget_YTD_2016" ColumnName="Budget YTD 2016" />
+          <ScalarProperty Name="Forecast_ITD" ColumnName="Forecast ITD" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_INS_ACCRUAL" FunctionName="BHSI_FINANCEModel.Store.USP_INS_ACCRUAL" />
+    <FunctionImportMapping FunctionImportName="USP_INS_ACCRUALPRIOR" FunctionName="BHSI_FINANCEModel.Store.USP_INS_ACCRUALPRIOR" />
+    <FunctionImportMapping FunctionImportName="USP_INS_ProcessLog" FunctionName="BHSI_FINANCEModel.Store.USP_INS_ProcessLog" />
+    <FunctionImportMapping FunctionImportName="USP_PRIORREPORT" FunctionName="BHSI_FINANCEModel.Store.USP_PRIORREPORT">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BHSI_FINANCEModel.USP_PRIORREPORT_Result">
+          <ScalarProperty Name="Measure" ColumnName="Measure" />
+          <ScalarProperty Name="QtrActuals" ColumnName="QtrActuals" />
+          <ScalarProperty Name="PriorActuals" ColumnName="PriorActuals" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_PRIORS" FunctionName="BHSI_FINANCEModel.Store.USP_PRIORS" />
+    <FunctionImportMapping FunctionImportName="USP_Processed_RejectedRows" FunctionName="BHSI_FINANCEModel.Store.USP_Processed_RejectedRows">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BHSI_FINANCEModel.USP_Processed_RejectedRows_Result">
+          <ScalarProperty Name="Col1" ColumnName="Col1" />
+          <ScalarProperty Name="Col2" ColumnName="Col2" />
+          <ScalarProperty Name="Col3" ColumnName="Col3" />
+          <ScalarProperty Name="Col4" ColumnName="Col4" />
+          <ScalarProperty Name="Col5" ColumnName="Col5" />
+          <ScalarProperty Name="Col6" ColumnName="Col6" />
+          <ScalarProperty Name="Col7" ColumnName="Col7" />
+          <ScalarProperty Name="Col8" ColumnName="Col8" />
+          <ScalarProperty Name="Col9" ColumnName="Col9" />
+          <ScalarProperty Name="Col10" ColumnName="Col10" />
+          <ScalarProperty Name="Col11" ColumnName="Col11" />
+          <ScalarProperty Name="Col12" ColumnName="Col12" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_Processed_RejectionReason_BKP" FunctionName="BHSI_FINANCEModel.Store.USP_Processed_RejectionReason_BKP">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BHSI_FINANCEModel.USP_Processed_RejectionReason_BKP_Result">
+          <ScalarProperty Name="Col1" ColumnName="Col1" />
+          <ScalarProperty Name="Col2" ColumnName="Col2" />
+          <ScalarProperty Name="Col3" ColumnName="Col3" />
+          <ScalarProperty Name="Col4" ColumnName="Col4" />
+          <ScalarProperty Name="Col5" ColumnName="Col5" />
+          <ScalarProperty Name="Col6" ColumnName="Col6" />
+          <ScalarProperty Name="Col7" ColumnName="Col7" />
+          <ScalarProperty Name="Col8" ColumnName="Col8" />
+          <ScalarProperty Name="Col9" ColumnName="Col9" />
+          <ScalarProperty Name="Col10" ColumnName="Col10" />
+          <ScalarProperty Name="col11" ColumnName="col11" />
+          <ScalarProperty Name="Col12" ColumnName="Col12" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_Rejected_Rows_Count" FunctionName="BHSI_FINANCEModel.Store.USP_Rejected_Rows_Count" />
+    <FunctionImportMapping FunctionImportName="USP_ReportList" FunctionName="BHSI_FINANCEModel.Store.USP_ReportList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BHSI_FINANCEModel.USP_ReportList_Result">
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="ReportCategory" ColumnName="ReportCategory" />
+          <ScalarProperty Name="ReportName" ColumnName="ReportName" />
+          <ScalarProperty Name="ReportOrder" ColumnName="ReportOrder" />
+          <ScalarProperty Name="RegionLabel" ColumnName="RegionLabel" />
+          <ScalarProperty Name="QTD_YTD_ITD" ColumnName="QTD_YTD_ITD" />
+          <ScalarProperty Name="ProductLabel" ColumnName="ProductLabel" />
+          <ScalarProperty Name="ReportPageName" ColumnName="ReportPageName" />
+          <ScalarProperty Name="ReportHeading" ColumnName="ReportHeading" />
+          <ScalarProperty Name="MGT_RPT_IND" ColumnName="MGT_RPT_IND" />
+          <ScalarProperty Name="DAC_RPT_IND" ColumnName="DAC_RPT_IND" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_SEND_MAIL" FunctionName="BHSI_FINANCEModel.Store.USP_SEND_MAIL" />
+    <FunctionImportMapping FunctionImportName="USP_TEST_JSON" FunctionName="BHSI_FINANCEModel.Store.USP_TEST_JSON" />
+    <FunctionImportMapping FunctionImportName="USP_TEST_XMLROOT" FunctionName="BHSI_FINANCEModel.Store.USP_TEST_XMLROOT" />
+    <FunctionImportMapping FunctionImportName="USP_TEST_XMLSPLIT" FunctionName="BHSI_FINANCEModel.Store.USP_TEST_XMLSPLIT" />
+    <FunctionImportMapping FunctionImportName="USP_TRUNC_CRT_TMPTables" FunctionName="BHSI_FINANCEModel.Store.USP_TRUNC_CRT_TMPTables" />
+    <FunctionImportMapping FunctionImportName="USP_TRUNCATE_STAGE_TABLES" FunctionName="BHSI_FINANCEModel.Store.USP_TRUNCATE_STAGE_TABLES" />
+    <FunctionImportMapping FunctionImportName="USP_GET_FINANCE_DATA_SH" FunctionName="BHSI_FINANCEModel.Store.USP_GET_FINANCE_DATA_SH">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BHSI_FINANCEModel.USP_GET_FINANCE_DATA_SH_Result">
+          <ScalarProperty Name="Financial_Measures" ColumnName="Financial_Measures" />
+          <ScalarProperty Name="Actual_Q3_2013" ColumnName="Actual Q3 2013" />
+          <ScalarProperty Name="Actual_Q4_2013" ColumnName="Actual Q4 2013" />
+          <ScalarProperty Name="Actual_FY_2013" ColumnName="Actual FY 2013" />
+          <ScalarProperty Name="Actual_Q1_2014" ColumnName="Actual Q1 2014" />
+          <ScalarProperty Name="Actual_Q2_2014" ColumnName="Actual Q2 2014" />
+          <ScalarProperty Name="Actual_6mo_2014" ColumnName="Actual 6mo 2014" />
+          <ScalarProperty Name="Actual_Q3_2014" ColumnName="Actual Q3 2014" />
+          <ScalarProperty Name="Actual_9mo_2014" ColumnName="Actual 9mo 2014" />
+          <ScalarProperty Name="Actual_Q4_2014" ColumnName="Actual Q4 2014" />
+          <ScalarProperty Name="Actual_YTD_2013" ColumnName="Actual YTD 2013" />
+          <ScalarProperty Name="Actual_Q1_2015" ColumnName="Actual Q1 2015" />
+          <ScalarProperty Name="Actual_Q2_2015" ColumnName="Actual Q2 2015" />
+          <ScalarProperty Name="Actual_6mo_2015" ColumnName="Actual 6mo 2015" />
+          <ScalarProperty Name="Actual_Q3_2015" ColumnName="Actual Q3 2015" />
+          <ScalarProperty Name="Actual_9mo_2015" ColumnName="Actual 9mo 2015" />
+          <ScalarProperty Name="Actual_Q4_2015" ColumnName="Actual Q4 2015" />
+          <ScalarProperty Name="Actual_YTD_2015" ColumnName="Actual YTD 2015" />
+          <ScalarProperty Name="Budget_Q1_2016" ColumnName="Budget Q1 2016" />
+          <ScalarProperty Name="Budget_Q2_2016" ColumnName="Budget Q2 2016" />
+          <ScalarProperty Name="Budget_6mo_2016" ColumnName="Budget 6mo 2016" />
+          <ScalarProperty Name="Budget_Q3_2016" ColumnName="Budget Q3 2016" />
+          <ScalarProperty Name="Budget_9mo_2016" ColumnName="Budget 9mo 2016" />
+          <ScalarProperty Name="Budget_Q4_2016" ColumnName="Budget Q4 2016" />
+          <ScalarProperty Name="Budget_YTD_2016" ColumnName="Budget YTD 2016" />
+          <ScalarProperty Name="Forecast_ITD" ColumnName="Forecast ITD" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>
