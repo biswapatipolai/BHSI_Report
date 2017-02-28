@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accordian.Web", "Accordian.Web\Accordian.Web.csproj", "{AD1F5D10-D0E4-4C69-9B6E-C7F980288BCA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLAndDAL", "BLAndDAL\BLAndDAL.csproj", "{DC8E2EEE-A427-43D3-B341-44B005542D65}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogic", "BLAndDAL\BusinessLogic.csproj", "{DC8E2EEE-A427-43D3-B341-44B005542D65}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

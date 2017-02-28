@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using BLAndDAL.BLANDDAL;
-using BLAndDAL;
+using BusinessLogic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Accordian.Web.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
-        BusinessLogic bl = new BusinessLogic();
+
+        BusinessLogic.BusinessLogic.BusinessLogic bl = new BusinessLogic.BusinessLogic.BusinessLogic();
         public ActionResult Index()
         {
             return View();
@@ -32,18 +33,37 @@ namespace Accordian.Web.Controllers
 
         public  ActionResult Login()
         {
-           
             return View();
         }
+      
 
         [HttpPost]
-        public ActionResult LoginSubmit(user usr)
+        public ActionResult LoginSubmit(UserModel usr)
         {
-            if (bl.GetUserDetails(usr) != null)
+            BaseController bl = new BaseController();
+            var userobj = bl.CheckADUser(usr.Email);
+            if (userobj!=null)
             {
-                Response.Redirect("Index");
+                Session["BSHI-AUTH-COOKIE"] = new UserModel() { EmpId = userobj.EmployeeId,  Email = userobj.EmailAddress, Name = userobj.Name };
+                return View("Index");
             }
-            return View();
+            else
+                return View("Login");
         }
     }
+}
+
+public class UserModel
+{
+    public string EmpId { get; set; }
+
+    [Required(ErrorMessage = "Please Enter Valid Email Id")]
+    public string Email { get; set; }
+
+    [Required(ErrorMessage = "Please Enter Valid Password")]
+    public string Password { get; set; }
+
+    public string Name { get; set; }
+
+
 }

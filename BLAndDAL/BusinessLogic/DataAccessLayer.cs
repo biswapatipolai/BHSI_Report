@@ -6,14 +6,31 @@ using System.Data.Entity.Core.Objects;
 using System.Data.Entity.Infrastructure;
 using System.Web;
 
-namespace BLAndDAL
+namespace BusinessLogic
 {
     public class BHSIDBEntities : DbContext
     {
         public BHSIDBEntities() : base("name=BHSIEntities") { }
 
         public DbSet<user> Users { get; set; }
-        public DbSet<group> Groups { get; set; }
+        public DbSet<Group> Groups { get; set; }
+
+
+        public int LogError(Exception ex)
+        {
+            Console.WriteLine(ex.ToString());
+            Console.ReadLine();
+            return 0;
+        }
+
+
+        public void LogSummery(user user)
+        {
+            ;
+        }
+
+
+
 
         //public virtual ObjectResult<user> GetAllUsers()
         //{

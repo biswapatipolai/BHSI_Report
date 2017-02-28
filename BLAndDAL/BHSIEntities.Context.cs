@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BLAndDAL
+namespace BusinessLogic
 {
     using System;
     using System.Data.Entity;
@@ -50,7 +50,7 @@ namespace BLAndDAL
         public virtual DbSet<EXCLUSION_MEASURE> EXCLUSION_MEASURE { get; set; }
         public virtual DbSet<group_rights> group_rights { get; set; }
         public virtual DbSet<group_rights_mapper> group_rights_mapper { get; set; }
-        public virtual DbSet<group> groups { get; set; }
+        public virtual DbSet<Group> groups { get; set; }
         public virtual DbSet<RejectActualData> RejectActualDatas { get; set; }
         public virtual DbSet<RejectAdjustmentData> RejectAdjustmentDatas { get; set; }
         public virtual DbSet<RejectBudgetData> RejectBudgetDatas { get; set; }

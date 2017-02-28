@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BLAndDAL
+namespace BusinessLogic
 {
     using System;
     
