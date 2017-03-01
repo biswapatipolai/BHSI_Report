@@ -1,0 +1,89 @@
+﻿
+@{
+    ViewBag.Title = "ModaPopup";
+}
+
+@{ Accordian.Web.Controllers.HomeController h = new Accordian.Web.Controllers.HomeController();
+    var  lst = h.GetList();
+
+}
+
+<h2>ModalPopup</h2>
+<body>
+    <ul>
+        @foreach (var st in ViewBag.s)
+        {
+            <li>
+                @st.key;
+            </li>
+        }
+    </ul>
+
+    <div class="container">
+        <h2>Modal Example</h2>
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Modal Header</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="col-sm-12 form-group">
+
+                            <label class="col-md-6" for="uploadQtrId">Quarter</label>
+                            <div class="col-md-6">
+                                <select class="form-control" id="uploadQtrId" name="uploadQtrId" required="true">
+                                    <option value="">Choose Quarter</option>
+                                    <option value="2">2013 Q4</option>
+                                    <option value="3">2014 Q1</option>
+                                    <option value="4">2014 Q2</option>
+                                    <option value="5">2014 Q3</option>
+                                    <option value="6">2014 Q4</option>
+                                    <option value="7">2015 Q1</option>
+                                    <option value="8">2015 Q2</option>
+                                    <option value="9">2015 Q3</option>
+                                    <option value="10">2015 Q4</option>
+                                    <option value="11">2016 Q1</option>
+                                    <option value="12">2016 Q2</option>
+                                    <option value="13">2016 Q3</option>
+                                    <option value="14">2016 Q4</option>
+                                    <option value="15">2017 Q1</option>
+                                    <option value="16">2017 Q2</option>
+                                    <option value="17">2017 Q3</option>
+                                    <option value="18">2017 Q4</option>
+                                    <option value="19">2018 Q1</option>
+                                    <option value="20">2018 Q2</option>
+                                    <option value="21">2018 Q3</option>
+                                    <option value="22">2018 Q4</option>
+                                    <option value="23">2019 Q1</option>
+                                    <option value="24">2019 Q2</option>
+                                    <option value="25">2019 Q3</option>
+                                    <option value="26">2019 Q4</option>
+                                    <option value="27">2013 Q1</option>
+                                    <option value="28">2013 Q2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <p>Some text in the modal.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+
